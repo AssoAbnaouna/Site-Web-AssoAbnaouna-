@@ -1,0 +1,2131 @@
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مركز أبناؤنا T21 | جمعية أبناؤنا لمتلازمة داون 21</title>
+<meta name="description" content="مركز أبناؤنا T21 – فضاء للتربية والتأهيل والدعم النفسي والاجتماعي والإدماج المدرسي والاجتماعي ومواكبة الأسر للأطفال ذوي متلازمة داون.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=El+Messiri:wght@500;600;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#e6007e;
+  --pink-l:#ff5aa8;
+  --pink-soft:#ffe9f4;
+  --pink-soft2:#fff6fb;
+  --navy:#14235c;
+  --navy-2:#25397f;
+  --ink:#1b2340;
+  --muted:#5f6784;
+  --line:#f1e3ec;
+  --bg:#fffafc;
+  --white:#fff;
+  --shadow:0 16px 40px rgba(20,35,92,.09);
+  --radius:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Cairo',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+button,input,select,textarea{font-family:inherit;font-size:1rem}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,h5{font-family:'El Messiri','Cairo',serif;margin:0;line-height:1.45;font-weight:700}
+p{margin:0 0 12px}
+ul{margin:0;padding:0}
+.container{width:min(1200px,92%);margin-inline:auto}
+[id]{scroll-margin-top:120px}
+.flash{animation:flashk 1.8s ease}
+@keyframes flashk{0%,100%{box-shadow:0 0 0 0 rgba(230,0,126,0)}35%{box-shadow:0 0 0 8px rgba(230,0,126,.22)}}
+
+/* ---------- TOPBAR / HEADER ---------- */
+.site-header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 2px 18px rgba(20,35,92,.06)}
+.topbar{background:var(--navy);color:#e9ecff;font-size:.78rem}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:7px 0;flex-wrap:wrap}
+.tb-contact{display:flex;gap:18px;flex-wrap:wrap}
+.tb-contact a{display:inline-flex;align-items:center;gap:6px;opacity:.9;transition:.2s}
+.tb-contact a:hover{opacity:1;color:var(--pink-l)}
+.tb-actions{display:flex;align-items:center;gap:10px}
+.tb-wa{background:rgba(255,255,255,.12);padding:3px 12px;border-radius:999px;font-weight:600;transition:.2s}
+.tb-wa:hover{background:#25d366;color:#fff}
+.tb-admin{background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;padding:3px 12px;border-radius:999px;cursor:pointer;font-size:.78rem;font-weight:600;transition:.2s}
+.tb-admin:hover{background:#fff;color:var(--navy)}
+.navbar{display:flex;align-items:center;gap:14px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;margin-inline-end:auto}
+.logo-mark{width:50px;height:50px;flex:none}
+.brand-txt b{display:block;font-family:'El Messiri';font-size:1.12rem;color:var(--navy);line-height:1.2}
+.brand-txt span{font-size:.7rem;color:var(--muted);font-weight:600;letter-spacing:.2px}
+.main-nav{display:flex;align-items:center;gap:2px}
+.nav-item{position:relative}
+.nav-link{display:flex;align-items:center;gap:5px;padding:9px 11px;border-radius:11px;font-size:.87rem;font-weight:700;color:var(--navy);cursor:pointer;background:none;border:none;white-space:nowrap;transition:.2s}
+.nav-link:hover{background:var(--pink-soft);color:var(--pink)}
+.nav-link i{font-size:.62rem;font-style:normal;transition:.25s;opacity:.7}
+.nav-item.open .nav-link{background:var(--pink-soft);color:var(--pink)}
+.nav-item.open .nav-link i{transform:rotate(180deg)}
+.dropdown{position:absolute;top:calc(100% + 8px);inset-inline-end:0;min-width:250px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 22px 50px rgba(20,35,92,.16);padding:8px;opacity:0;visibility:hidden;transform:translateY(10px);transition:.22s;z-index:90;max-height:70vh;overflow:auto}
+.nav-item.open .dropdown,.nav-item:hover .dropdown{opacity:1;visibility:visible;transform:none}
+.dropdown a{display:block;padding:9px 13px;border-radius:10px;font-size:.85rem;font-weight:600;color:#3c4468;transition:.16s}
+.dropdown a:hover{background:var(--pink-soft2);color:var(--pink)}
+.nav-cta{padding:10px 18px;font-size:.85rem}
+.burger{display:none;background:var(--pink-soft);border:none;color:var(--pink);width:44px;height:44px;border-radius:13px;font-size:1.25rem;cursor:pointer;transition:.2s}
+.burger:hover{background:var(--pink);color:#fff}
+.scrim{position:fixed;inset:0;background:rgba(15,22,52,.5);z-index:85;opacity:0;visibility:hidden;transition:.3s}
+.scrim.show{opacity:1;visibility:visible}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;padding:56px 0 66px;background:linear-gradient(160deg,#ffffff 0%,#ffeef7 52%,#fff6fb 100%)}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(6px);opacity:.55;pointer-events:none}
+.hero::before{width:340px;height:340px;background:radial-gradient(circle,#ffc8e4,transparent 70%);top:-120px;inset-inline-start:-90px}
+.hero::after{width:420px;height:420px;background:radial-gradient(circle,#d9e2ff,transparent 70%);bottom:-180px;inset-inline-end:-120px}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.eyebrow{display:inline-block;background:#fff;color:var(--pink);padding:6px 16px;border-radius:999px;font-size:.78rem;font-weight:800;margin-bottom:14px;box-shadow:0 6px 18px rgba(230,0,126,.14);border:1px solid var(--pink-soft)}
+.hero h1{font-size:clamp(2rem,4.6vw,3.1rem);color:var(--navy);line-height:1.25}
+.hero h1 span{color:var(--pink);position:relative}
+.hero-tag{font-family:'Aref Ruqaa',serif;font-size:clamp(1.25rem,2.6vw,1.7rem);color:var(--navy-2);margin:10px 0 4px}
+.hero-lead{color:var(--muted);font-size:1rem;max-width:560px;margin-top:8px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px;max-width:600px}
+.hstat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 8px;text-align:center;box-shadow:0 8px 22px rgba(20,35,92,.05)}
+.hstat b{display:block;font-family:'El Messiri';font-size:1.5rem;color:var(--pink);line-height:1.2}
+.hstat span{font-size:.72rem;color:var(--muted);font-weight:700}
+.hero-visual{position:relative}
+.hero-logo-card{background:#fff;border-radius:26px;padding:16px;box-shadow:0 26px 60px rgba(20,35,92,.14);border:1px solid var(--line);position:relative;z-index:2}
+.hero-logo-card img{border-radius:16px;width:100%}
+.float-badge{position:absolute;background:#fff;border-radius:14px;padding:8px 14px;font-size:.78rem;font-weight:800;color:var(--navy);box-shadow:0 14px 30px rgba(20,35,92,.13);border:1px solid var(--line);z-index:3;animation:floaty 5s ease-in-out infinite}
+.fb1{top:-14px;inset-inline-start:-10px;color:var(--pink)}
+.fb2{bottom:34px;inset-inline-end:-18px;animation-delay:1.2s}
+.fb3{bottom:-16px;inset-inline-start:14px;animation-delay:2.4s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* ---------- SECTIONS ---------- */
+.section{padding:70px 0}
+.section.alt{background:linear-gradient(180deg,#fff6fb,#ffffff)}
+.section-head{text-align:center;max-width:760px;margin:0 auto 40px}
+.section-head .eyebrow{margin-bottom:12px}
+.section-head h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--navy)}
+.section-head p{color:var(--muted);margin-top:12px}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(20,35,92,.12)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:800;font-size:.88rem;border:none;cursor:pointer;transition:.22s;font-family:inherit}
+.btn-pink{background:linear-gradient(135deg,var(--pink),var(--pink-l));color:#fff;box-shadow:0 12px 26px rgba(230,0,126,.28)}
+.btn-pink:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(230,0,126,.36)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2);transform:translateY(-2px)}
+.btn-ghost{background:#fff;border:1.6px solid var(--line);color:var(--navy)}
+.btn-ghost:hover{border-color:var(--pink);color:var(--pink)}
+.btn-sm{padding:8px 15px;font-size:.8rem}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:22px;align-items:start}
+.about-main h3{color:var(--navy);font-size:1.3rem;margin-bottom:12px}
+.about-main p{color:#4b5474}
+.check-list{list-style:none;margin-top:8px}
+.check-list li{position:relative;padding-inline-start:30px;margin-bottom:9px;color:#3d466a;font-weight:600;font-size:.92rem}
+.check-list li::before{content:"✓";position:absolute;inset-inline-start:0;top:2px;width:21px;height:21px;background:var(--pink-soft);color:var(--pink);border-radius:50%;display:grid;place-items:center;font-size:.75rem;font-weight:900}
+.about-side{display:grid;gap:12px}
+.mini-card{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:0 10px 24px rgba(20,35,92,.05)}
+.mini-card span{font-size:1.5rem;width:48px;height:48px;display:grid;place-items:center;background:var(--pink-soft2);border-radius:14px;flex:none}
+.mini-card b{display:block;color:var(--navy);font-size:.94rem;font-family:'El Messiri'}
+.mini-card small{color:var(--muted);font-size:.78rem}
+.pillar-grid{margin-top:24px}
+.pillar{position:relative;overflow:hidden}
+.pillar::after{content:"";position:absolute;top:0;inset-inline-start:0;width:100%;height:5px;background:linear-gradient(90deg,var(--pink),var(--pink-l))}
+.pillar .p-ico{font-size:1.8rem;margin-bottom:10px}
+.pillar h3{color:var(--navy);font-size:1.15rem;margin-bottom:10px}
+.pillar p,.pillar li{color:#4b5474;font-size:.9rem}
+.pillar ol{margin:0;padding-inline-start:20px}
+.pillar ol li{margin-bottom:7px}
+
+/* services */
+.service-card{display:flex;flex-direction:column}
+.service-icon{width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,var(--pink-soft),#fff);display:grid;place-items:center;font-size:1.6rem;margin-bottom:14px}
+.service-card h3{color:var(--navy);font-size:1.1rem;margin-bottom:8px}
+.service-card p{color:var(--muted);font-size:.88rem}
+.link-btn{background:none;border:none;color:var(--pink);font-weight:800;font-size:.83rem;cursor:pointer;padding:6px 0;display:inline-flex;align-items:center;gap:6px;font-family:inherit}
+.link-btn span{transition:.25s;display:inline-block}
+.link-btn.open span{transform:rotate(180deg)}
+.service-details{display:none;list-style:none;margin-top:10px;border-top:1px dashed var(--line);padding-top:12px}
+.service-details.open{display:block;animation:fadein .3s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.service-details li{position:relative;padding-inline-start:20px;font-size:.85rem;color:#4b5474;margin-bottom:7px}
+.service-details li::before{content:"•";position:absolute;inset-inline-start:4px;color:var(--pink);font-weight:900}
+
+/* tabs */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:26px}
+.tab{background:#fff;border:1.6px solid var(--line);color:var(--navy);padding:10px 20px;border-radius:999px;font-weight:800;font-size:.85rem;cursor:pointer;transition:.2s;font-family:inherit}
+.tab:hover{border-color:var(--pink-soft);color:var(--pink)}
+.tab.active{background:linear-gradient(135deg,var(--pink),var(--pink-l));color:#fff;border-color:transparent;box-shadow:0 10px 24px rgba(230,0,126,.25)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadein .32s ease}
+
+/* chips */
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.8rem;font-weight:700;color:var(--navy);cursor:pointer;transition:.2s;font-family:inherit}
+.chip:hover{border-color:var(--pink-soft);color:var(--pink)}
+.chip.active{background:var(--pink);border-color:var(--pink);color:#fff}
+.badge{display:inline-block;padding:4px 12px;border-radius:999px;font-size:.72rem;font-weight:800;background:var(--pink-soft);color:var(--pink)}
+.badge.navy{background:#e8ecfb;color:var(--navy)}
+.badge.green{background:#e3f8ec;color:#12855a}
+.badge.amber{background:#fff3e0;color:#b26a00}
+
+/* forms */
+.pub-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.82rem;font-weight:800;color:var(--navy)}
+.field input,.field select,.field textarea{border:1.6px solid var(--line);background:#fff;border-radius:13px;padding:11px 14px;font-size:.92rem;transition:.2s;color:var(--ink)}
+.field textarea{resize:vertical;min-height:96px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 4px rgba(230,0,126,.1)}
+.field.full,.full{grid-column:1/-1}
+.form-note{font-size:.78rem;color:var(--muted);margin-top:6px}
+.success-box{background:#e9fbf1;border:1px solid #b9eed1;color:#0f6b47;padding:16px 18px;border-radius:15px;font-weight:700;font-size:.9rem;margin-bottom:18px;display:none}
+.success-box.show{display:block;animation:fadein .3s ease}
+.info-box{background:var(--pink-soft2);border:1px dashed #f6c6dd;border-radius:15px;padding:16px;font-size:.86rem;color:#5b4a55}
+
+/* empty states */
+.empty{text-align:center;padding:48px 20px;border:2px dashed var(--line);border-radius:var(--radius);background:#fff}
+.empty-icon{font-size:2.4rem;margin-bottom:12px;opacity:.85}
+.empty h4{color:var(--navy);font-size:1.05rem;margin-bottom:6px}
+.empty p{color:var(--muted);font-size:.86rem;margin:0}
+.empty small{display:block;margin-top:10px;color:var(--pink);font-weight:700;font-size:.76rem}
+
+/* team */
+.members{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.member{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;text-align:center;box-shadow:0 12px 28px rgba(20,35,92,.06);transition:.25s}
+.member:hover{transform:translateY(-4px)}
+.avatar{width:72px;height:72px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;font-size:1.6rem;font-weight:900;color:#fff;background:linear-gradient(135deg,var(--pink),var(--pink-l));font-family:'El Messiri'}
+.avatar.navy{background:linear-gradient(135deg,var(--navy),var(--navy-2))}
+.member b{display:block;color:var(--navy);font-family:'El Messiri';font-size:1rem}
+.member span{display:block;color:var(--pink);font-size:.8rem;font-weight:700;margin-top:2px}
+.member small{display:block;color:var(--muted);font-size:.76rem;margin-top:6px}
+
+/* activities */
+.act-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.act-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.25s;display:flex;flex-direction:column}
+.act-card:hover{transform:translateY(-5px);box-shadow:0 22px 46px rgba(20,35,92,.13)}
+.act-thumb{height:150px;background:linear-gradient(135deg,var(--pink-soft),#eef2ff);display:grid;place-items:center;font-size:2.4rem;overflow:hidden}
+.act-thumb img{width:100%;height:100%;object-fit:cover}
+.act-body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.act-body h4{color:var(--navy);font-size:1rem}
+.act-body p{color:var(--muted);font-size:.85rem;margin:0}
+.act-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:.76rem;color:var(--muted);font-weight:700;margin-top:auto;padding-top:8px;border-top:1px dashed var(--line)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.g-item{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);background:#fff;border:1px solid var(--line)}
+.g-item img{width:100%;height:190px;object-fit:cover}
+.g-item .g-cap{padding:12px 14px;font-size:.85rem;font-weight:700;color:var(--navy)}
+.g-video{height:190px;display:grid;place-items:center;background:linear-gradient(135deg,#eef2ff,var(--pink-soft));font-size:2rem}
+
+/* announcements */
+.ann-list{display:grid;gap:16px}
+.ann{display:flex;gap:18px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 12px 28px rgba(20,35,92,.06);transition:.25s;border-inline-start:5px solid var(--pink)}
+.ann:hover{transform:translateX(-4px)}
+.ann-ico{width:52px;height:52px;border-radius:15px;background:var(--pink-soft2);display:grid;place-items:center;font-size:1.4rem;flex:none}
+.ann h4{color:var(--navy);font-size:1rem;margin-bottom:6px}
+.ann p{color:var(--muted);font-size:.87rem;margin:0}
+.ann-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.c-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start;transition:.25s}
+.c-card:hover{transform:translateY(-4px)}
+.c-card .c-ico{width:50px;height:50px;border-radius:15px;background:var(--pink-soft2);display:grid;place-items:center;font-size:1.35rem;flex:none}
+.c-card b{display:block;color:var(--navy);font-size:.92rem;font-family:'El Messiri'}
+.c-card a,.c-card span{color:var(--muted);font-size:.85rem;word-break:break-word}
+.c-card a:hover{color:var(--pink)}
+.map-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);margin-top:22px}
+.map-wrap iframe{width:100%;height:340px;border:0;display:block}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.socials button{width:44px;height:44px;border-radius:13px;border:1.5px solid var(--line);background:#fff;cursor:pointer;font-size:1.05rem;transition:.2s;display:grid;place-items:center}
+.socials button:hover{background:var(--pink);border-color:var(--pink);color:#fff;transform:translateY(-3px)}
+
+/* footer */
+footer{background:var(--navy);color:#d7ddf5;padding:56px 0 0;margin-top:20px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:36px}
+.f-grid h4{color:#fff;font-size:1.05rem;margin-bottom:14px;font-family:'El Messiri'}
+.f-grid a,.f-grid p{color:#b6c0e6;font-size:.86rem;display:block;margin-bottom:8px;transition:.2s}
+.f-grid a:hover{color:var(--pink-l)}
+.f-bottom{border-top:1px solid rgba(255,255,255,.12);padding:18px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.8rem;color:#96a2d0;align-items:center}
+.f-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.f-brand .logo-mark{width:44px;height:44px}
+.f-brand b{color:#fff;font-family:'El Messiri';font-size:1.1rem}
+
+/* floating buttons */
+.float-wa{position:fixed;bottom:24px;inset-inline-start:24px;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 14px 30px rgba(37,211,102,.4);z-index:70;transition:.25s;border:none;cursor:pointer}
+.float-wa:hover{transform:scale(1.08)}
+.to-top{position:fixed;bottom:24px;inset-inline-end:24px;width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:1.1rem;border:none;cursor:pointer;box-shadow:0 12px 26px rgba(20,35,92,.3);z-index:70;opacity:0;visibility:hidden;transition:.3s}
+.to-top.show{opacity:1;visibility:visible}
+
+/* toast */
+.toast{position:fixed;bottom:28px;inset-inline-end:50%;transform:translate(50%,22px);background:var(--navy);color:#fff;padding:14px 24px;border-radius:15px;box-shadow:0 18px 40px rgba(20,35,92,.35);z-index:600;opacity:0;visibility:hidden;transition:.3s;font-weight:700;font-size:.87rem;max-width:92vw;text-align:center}
+.toast.show{opacity:1;visibility:visible;transform:translate(50%,0)}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(12,18,45,.72);backdrop-filter:blur(5px);display:none;align-items:center;justify-content:center;z-index:400;padding:20px}
+.modal.show{display:flex}
+.modal-card{background:#fff;border-radius:24px;padding:30px 28px;width:min(420px,100%);text-align:center;box-shadow:0 30px 70px rgba(0,0,0,.3);animation:pop .32s ease}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(14px)}to{opacity:1;transform:none}}
+.modal-card .lock{width:66px;height:66px;border-radius:50%;background:var(--pink-soft);color:var(--pink);display:grid;place-items:center;font-size:1.7rem;margin:0 auto 16px}
+.modal-card h3{color:var(--navy);margin-bottom:6px}
+.modal-card p{color:var(--muted);font-size:.86rem}
+.modal-card input{width:100%;border:1.6px solid var(--line);border-radius:13px;padding:13px 15px;margin:16px 0 8px;font-size:1rem;text-align:center;letter-spacing:2px}
+.modal-card input:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 4px rgba(230,0,126,.1)}
+.modal-actions{display:flex;gap:10px;margin-top:14px}
+.modal-actions .btn{flex:1}
+.err{color:#d32f2f;font-size:.8rem;font-weight:700;min-height:18px}
+
+/* ---------- ADMIN ---------- */
+.admin-overlay{position:fixed;inset:0;background:#0d1430;z-index:300;display:none;flex-direction:column;color:#e8ecf8}
+.admin-overlay.show{display:flex}
+.admin-top{display:flex;align-items:center;gap:14px;padding:12px 20px;background:#131c40;border-bottom:1px solid #22306b;flex-wrap:wrap}
+.admin-top h3{color:#fff;font-size:1.05rem;margin:0;font-family:'El Messiri'}
+.admin-top .spacer{flex:1}
+.admin-top .a-user{font-size:.8rem;color:#9fb0e8;background:#1b2650;padding:6px 14px;border-radius:999px}
+.admin-body-wrap{display:flex;flex:1;min-height:0}
+.admin-side{width:262px;background:#111938;border-inline-end:1px solid #22306b;overflow-y:auto;padding:14px;flex:none}
+.admin-main{flex:1;overflow-y:auto;padding:22px}
+.admin-nav-item{display:flex;align-items:center;gap:11px;width:100%;padding:11px 13px;border-radius:13px;background:transparent;border:none;color:#b9c3e6;font-weight:700;font-size:.86rem;cursor:pointer;text-align:start;transition:.2s;margin-bottom:4px;font-family:inherit}
+.admin-nav-item:hover{background:#1b2650;color:#fff}
+.admin-nav-item.active{background:linear-gradient(135deg,var(--pink),var(--pink-l));color:#fff;box-shadow:0 10px 22px rgba(230,0,126,.3)}
+.a-block{background:#131c40;border:1px solid #22306b;border-radius:18px;padding:20px;margin-bottom:18px}
+.a-block h4{color:#fff;font-size:1rem;margin-bottom:14px;font-family:'El Messiri'}
+.a-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:18px}
+.a-stat{background:#131c40;border:1px solid #22306b;border-radius:16px;padding:16px;display:flex;align-items:center;gap:12px}
+.a-stat .ico{width:46px;height:46px;border-radius:13px;background:#1b2650;display:grid;place-items:center;font-size:1.3rem}
+.a-stat b{display:block;font-size:1.5rem;color:#fff;font-family:'El Messiri';line-height:1.2}
+.a-stat span{font-size:.75rem;color:#9fb0e8}
+.a-form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px;margin-bottom:15px}
+.a-field{display:flex;flex-direction:column;gap:6px;font-size:.79rem;color:#a9b5e0;font-weight:700}
+.a-field input,.a-field select,.a-field textarea{background:#0f1734;border:1px solid #2a3a76;border-radius:11px;padding:10px 12px;color:#fff;font-size:.88rem;font-family:inherit;width:100%}
+.a-field input:focus,.a-field select:focus,.a-field textarea:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(230,0,126,.2)}
+.a-table-wrap{overflow-x:auto;border-radius:13px;border:1px solid #22306b}
+.a-table{width:100%;border-collapse:collapse;font-size:.83rem;min-width:560px}
+.a-table th{background:#1a2450;color:#9fb0e8;padding:11px;text-align:start;font-weight:800;white-space:nowrap}
+.a-table td{padding:11px;border-top:1px solid #22306b;color:#dfe5fb;vertical-align:middle}
+.a-del{background:#3a1a30;border:1px solid #6b2450;color:#ff9ecb;border-radius:9px;padding:5px 11px;font-size:.75rem;cursor:pointer;font-weight:700;font-family:inherit}
+.a-del:hover{background:#5a1f45;color:#fff}
+.a-st{background:#1b2650;border:1px solid #2f4080;color:#b9c3e6;border-radius:9px;padding:5px 11px;font-size:.72rem;cursor:pointer;font-weight:700;margin-inline-end:4px;font-family:inherit}
+.a-st:hover{border-color:var(--pink);color:#fff}
+.a-empty{padding:26px;text-align:center;color:#7c8ab8;font-size:.85rem;background:#0f1734;border-radius:13px;border:1px dashed #2a3a76}
+.a-note{background:#15204a;border:1px solid #26356e;border-radius:14px;padding:14px 16px;color:#a9b5e0;font-size:.83rem;margin-bottom:18px}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1100px){
+  .f-grid{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr}
+}
+@media (max-width:1024px){
+  .burger{display:block}
+  .main-nav{position:fixed;top:0;inset-inline-start:0;height:100%;width:min(340px,88%);background:#fff;flex-direction:column;align-items:stretch;gap:4px;padding:88px 16px 30px;overflow-y:auto;transform:translateX(105%);transition:transform .32s ease;z-index:88;box-shadow:-16px 0 46px rgba(20,35,92,.18)}
+  .main-nav.open{transform:translateX(0)}
+  .nav-link{width:100%;justify-content:space-between;padding:13px 14px;font-size:.95rem}
+  .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:var(--pink-soft2);max-height:0;overflow:hidden;padding:0;transition:max-height .3s ease,padding .3s ease;border-radius:12px;min-width:0}
+  .nav-item.open .dropdown{max-height:600px;padding:8px;margin-bottom:6px}
+  .nav-item:hover .dropdown{max-height:0;padding:0}
+  .nav-item.open:hover .dropdown{max-height:600px;padding:8px}
+  .nav-cta{width:100%;margin-top:8px}
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero-lead{margin-inline:auto}
+  .hero-actions,.hero-stats{justify-content:center;margin-inline:auto}
+  .hero-actions{display:flex}
+  .hero-stats{max-width:100%}
+  .brand-txt span{display:none}
+}
+@media (max-width:760px){
+  .section{padding:52px 0}
+  .hero{padding:36px 0 50px}
+  .tb-contact{font-size:.72rem;gap:12px}
+  .tb-contact a:nth-child(3){display:none}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .g4,.g3,.g2{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr;gap:22px}
+  .f-bottom{justify-content:center;text-align:center}
+  .members{grid-template-columns:1fr 1fr}
+  .ann{flex-direction:column;gap:10px}
+  .float-badge{display:none}
+  .admin-side{width:auto;display:flex;gap:8px;overflow-x:auto;padding:10px;border-inline-end:none;border-bottom:1px solid #22306b;flex:none}
+  .admin-nav-item{white-space:nowrap;width:auto;margin-bottom:0}
+  .admin-body-wrap{flex-direction:column}
+}
+@media (max-width:480px){
+  .members{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="tb-contact">
+        <a href="tel:0524392060">☎ 0524 39 20 60</a>
+        <a href="tel:0677659639">📱 06 77 65 96 39</a>
+        <a href="mailto:ass.abnaouna@hotmail.com">✉ ass.abnaouna@hotmail.com</a>
+      </div>
+      <div class="tb-actions">
+        <a class="tb-wa" href="https://wa.me/212677659639" target="_blank" rel="noopener">واتساب</a>
+        <button class="tb-admin" id="openLogin">🔒 لوحة الإدارة</button>
+      </div>
+    </div>
+  </div>
+  <div class="container navbar">
+    <a href="#home" class="brand">
+      <svg class="logo-mark" viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="64" cy="20" r="13" fill="#e6007e"/>
+        <path d="M24 76 L48 44 H70 L96 28" fill="none" stroke="#e6007e" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="18" y="106" font-family="Cairo, sans-serif" font-size="48" font-weight="900" fill="#14235c">2</text>
+        <text x="60" y="106" font-family="Cairo, sans-serif" font-size="48" font-weight="900" fill="#14235c">1</text>
+      </svg>
+      <span class="brand-txt">
+        <b>أبناؤنا T21</b>
+        <span>مركز التربية والتأهيل والدعم</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="القائمة الرئيسية">
+      <a class="nav-link" href="#home">الرئيسية</a>
+
+      <div class="nav-item">
+        <button class="nav-link has-drop" type="button">عن المركز <i>▾</i></button>
+        <div class="dropdown">
+          <a href="#about">تعريف مختصر بالمركز</a>
+          <a href="#vision">الرؤية</a>
+          <a href="#mission">الرسالة</a>
+          <a href="#goals">الأهداف</a>
+          <a href="#target">الفئة المستفيدة</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link has-drop" type="button">خدماتنا <i>▾</i></button>
+        <div class="dropdown">
+          <a href="#svc-edu">التربية والتأهيل</a>
+          <a href="#svc-psy">الدعم النفسي والاجتماعي</a>
+          <a href="#svc-ped">الأنشطة التربوية</a>
+          <a href="#svc-sport">الأنشطة الرياضية</a>
+          <a href="#svc-art">الأنشطة الفنية</a>
+          <a href="#svc-inclusion">الإدماج المدرسي والاجتماعي</a>
+          <a href="#svc-family">مواكبة الأسر</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link has-drop" type="button">المستفيدون <i>▾</i></button>
+        <div class="dropdown">
+          <a href="#beneficiaries" data-tablink="cond">شروط الاستفادة</a>
+          <a href="#beneficiaries" data-tablink="reg">طلب التسجيل</a>
+          <a href="#beneficiaries" data-tablink="file">ملف المستفيد</a>
+          <a href="#beneficiaries" data-tablink="track">تتبع الاستفادة</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link has-drop" type="button">الطاقم <i>▾</i></button>
+        <div class="dropdown">
+          <a href="#team" data-tablink="admin">الإدارة</a>
+          <a href="#team" data-tablink="educators">المربون</a>
+          <a href="#team" data-tablink="specialists">الأطر المتخصصة</a>
+          <a href="#team" data-tablink="volunteers">المتطوعون</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link has-drop" type="button">الأنشطة <i>▾</i></button>
+        <div class="dropdown">
+          <a href="#activities" data-actlink="daily">الأنشطة اليومية</a>
+          <a href="#activities" data-actlink="workshops">الورشات</a>
+          <a href="#activities" data-actlink="trips">الرحلات</a>
+          <a href="#activities" data-actlink="sport">الأنشطة الرياضية</a>
+          <a href="#activities" data-actlink="culture">الأنشطة الثقافية والفنية</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link has-drop" type="button">فضاء الأسرة <i>▾</i></button>
+        <div class="dropdown">
+          <a href="#family" data-famlink="طلب معلومات">طلب معلومات</a>
+          <a href="#family" data-famlink="طلب موعد">طلب موعد</a>
+          <a href="#family" data-famlink="طلب الاستفادة">طلب الاستفادة</a>
+          <a href="#family" data-famlink="التواصل مع الإدارة">التواصل مع الإدارة</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link has-drop" type="button">المزيد <i>▾</i></button>
+        <div class="dropdown">
+          <a href="#media" data-medialink="photos">معرض الصور</a>
+          <a href="#media" data-medialink="videos">فيديوهات الأنشطة</a>
+          <a href="#announcements">الإعلانات</a>
+          <a href="#volunteer">التطوع</a>
+          <a href="#partners">الشركاء</a>
+          <a href="#partnership-form">طلب شراكة</a>
+          <a href="#support">دعم المركز</a>
+          <a href="#equipment-form">التبرع بالمعدات واللوازم</a>
+        </div>
+      </div>
+
+      <a class="btn btn-pink nav-cta" href="#contact">تواصل معنا</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-label="فتح القائمة">☰</button>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">جمعية أبناؤنا لمتلازمة داون 21</span>
+      <h1>مركز <span>أبناؤنا T21</span></h1>
+      <p class="hero-tag">معاً… من أجل تنمية قدراتهم وبناء مستقبلهم</p>
+      <p class="hero-lead">فضاء تربوي وتأهيلي يحتضن الأطفال واليافعين من ذوي متلازمة داون، ويقدّم لهم التربية والتأهيل والدعم النفسي والاجتماعي والإدماج المدرسي والاجتماعي، مع مواكبة أسرهم.</p>
+      <div class="hero-actions">
+        <a class="btn btn-pink" href="#beneficiaries" data-tablink="reg">📝 طلب التسجيل</a>
+        <a class="btn btn-ghost" href="#services">خدمات المركز</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b id="statBenef">0</b><span>مستفيد</span></div>
+        <div class="hstat"><b id="statStaff">0</b><span>إطار</span></div>
+        <div class="hstat"><b id="statActivities">0</b><span>نشاط</span></div>
+        <div class="hstat"><b id="statVolunteers">0</b><span>متطوع</span></div>
+      </div>
+      <p class="form-note" style="margin-top:10px">تُحدَّث هذه الأرقام تلقائياً من طرف إدارة المركز عبر لوحة الإدارة.</p>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-logo-card">
+        <img src="https://www.designarena.ai/u/43ff2ff2-1ade-45e7-b722-ae0d3bfc4d95" alt="شعار جمعية أبناؤنا لمتلازمة داون 21">
+      </div>
+      <div class="float-badge fb1">🎓 التربية والتأهيل</div>
+      <div class="float-badge fb2">💗 الدعم النفسي والاجتماعي</div>
+      <div class="float-badge fb3">🏫 الإدماج المدرسي والاجتماعي</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">تعريف مختصر</span>
+      <h2>من نحن؟</h2>
+      <p>مركز أبناؤنا T21 هو فضاء تربوي وتأهيلي تابع لجمعية أبناؤنا لمتلازمة داون 21، يشتغل على تنمية قدرات الأطفال واليافعين من ذوي متلازمة داون ومواكبة أسرهم.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="card about-main">
+        <h3>مركز متخصص في التربية والتأهيل والدعم</h3>
+        <p>يقدّم المركز برامج تربوية وتأهيلية ودعماً نفسياً واجتماعياً للأطفال حاملي متلازمة داون، بشراكة تامة مع أسرهم، ويهدف إلى تنمية مهاراتهم الحركية واللغوية والذهنية والاجتماعية، وتعزيز استقلاليتهم واندماجهم في الوسط المدرسي والاجتماعي.</p>
+        <p>يعتمد المركز على مقاربة فردية تراعي خصوصية كل طفل وقدراته، انطلاقاً من تقييم أوّلي، وبرنامج فردي، وتتبّع منتظم بمشاركة الأسرة.</p>
+        <ul class="check-list">
+          <li>برنامج فردي لكل طفل حسب قدراته واحتياجاته</li>
+          <li>أنشطة تربوية ورياضية وثقافية وفنية</li>
+          <li>دعم نفسي واجتماعي للطفل ولأسرته</li>
+          <li>مواكبة الإدماج المدرسي والاجتماعي</li>
+        </ul>
+      </div>
+      <div class="about-side">
+        <div class="mini-card"><span>🎓</span><div><b>التربية والتأهيل</b><small>برامج فردية ومتابعة دورية</small></div></div>
+        <div class="mini-card"><span>💗</span><div><b>الدعم النفسي والاجتماعي</b><small>مواكبة الطفل والأسرة</small></div></div>
+        <div class="mini-card"><span>🏫</span><div><b>الإدماج المدرسي والاجتماعي</b><small>جسور مع المؤسسات التعليمية</small></div></div>
+        <div class="mini-card"><span>👨‍👩‍👧</span><div><b>مواكبة الأسر</b><small>تكوين وإرشاد وتوجيه</small></div></div>
+      </div>
+    </div>
+
+    <div class="grid g4 pillar-grid">
+      <article class="card pillar" id="vision">
+        <div class="p-ico">🌟</div>
+        <h3>الرؤية</h3>
+        <p>أن يكون المركز فضاءً مرجعياً في التربية والتأهيل والدعم للأطفال واليافعين من ذوي متلازمة داون، يضمن لهم حقهم في التعليم والتأهيل والمشاركة الكاملة في المجتمع.</p>
+      </article>
+      <article class="card pillar" id="mission">
+        <div class="p-ico">🎯</div>
+        <h3>الرسالة</h3>
+        <p>تقديم خدمات تربوية وتأهيلية ونفسية واجتماعية ذات جودة، بشراكة مع الأسرة والمؤسسات، من أجل تنمية قدرات الأطفال حاملي متلازمة داون وتعزيز استقلاليتهم وإدماجهم.</p>
+      </article>
+      <article class="card pillar" id="goals">
+        <div class="p-ico">📌</div>
+        <h3>الأهداف</h3>
+        <ol>
+          <li>تنمية المهارات الحركية واللغوية والذهنية للطفل.</li>
+          <li>تعزيز الثقة بالنفس والاستقلالية.</li>
+          <li>دعم الإدماج المدرسي والاجتماعي.</li>
+          <li>مواكبة الأسرة وتكوينها.</li>
+          <li>تنظيم أنشطة تربوية ورياضية وفنية وثقافية.</li>
+        </ol>
+      </article>
+      <article class="card pillar" id="target">
+        <div class="p-ico">🧒</div>
+        <h3>الفئة المستفيدة</h3>
+        <p>أطفال ويافعون من ذوي متلازمة داون (T21)، يتابعون برامج المركز التربوية والتأهيلية وفق ما تحدده إدارة المركز من معايير وطاقة استيعابية.</p>
+        <p class="form-note">تُحدَّد لائحة المستفيدين النهائية وشروط القبول من طرف إدارة المركز.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section alt" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">خدمات المركز</span>
+      <h2>ماذا نقدّم لأبنائنا؟</h2>
+      <p>حزمة من الخدمات التربوية والتأهيلية والدعم النفسي والاجتماعي، تُبنى بشكل فردي لكل مستفيد وفق حاجياته.</p>
+    </div>
+    <div class="grid g3" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ================= BENEFICIARIES ================= -->
+<section class="section" id="beneficiaries">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">المستفيدون</span>
+      <h2>التسجيل والاستفادة</h2>
+      <p>كل ما يتعلق بشروط الاستفادة، طلب التسجيل، ملف المستفيد وتتبّع الاستفادة.</p>
+    </div>
+
+    <div data-tabs="beneficiaries">
+      <div class="tabs">
+        <button class="tab active" data-tab="cond" type="button">شروط الاستفادة</button>
+        <button class="tab" data-tab="reg" type="button">طلب التسجيل</button>
+        <button class="tab" data-tab="file" type="button">ملف المستفيد</button>
+        <button class="tab" data-tab="track" type="button">تتبع الاستفادة</button>
+      </div>
+
+      <!-- شروط الاستفادة -->
+      <div class="tab-panel active" data-panel="cond">
+        <div class="grid g2">
+          <div class="card">
+            <h3 style="color:var(--navy);margin-bottom:14px">الشروط العامة</h3>
+            <ul class="check-list">
+              <li>أن يكون الطفل من ذوي متلازمة داون (T21).</li>
+              <li>تقديم طلب التسجيل عبر المنصة أو بمقر المركز.</li>
+              <li>تقديم تقرير طبي أو شهادة تُثبت الحالة.</li>
+              <li>نسخة من بطاقة التعريف الوطنية لولي الأمر.</li>
+              <li>صور شخصية للطفل (عدد تحدده الإدارة).</li>
+              <li>شهادة السكنى أو ما يعادلها.</li>
+              <li>التزام الأسرة بمواكبة برنامج المركز بانتظام.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 style="color:var(--navy);margin-bottom:14px">ملاحظات مهمة</h3>
+            <p style="color:var(--muted);font-size:.9rem">تُدرَس طلبات التسجيل من طرف إدارة المركز، ويتم إخبار الأسرة بالنتيجة عبر الهاتف أو البريد الإلكتروني.</p>
+            <p style="color:var(--muted);font-size:.9rem">طاقة الاستيعاب محدودة، وتُعطى الأولوية حسب معايير يحددها المركز.</p>
+            <div class="info-box" style="margin-top:16px">
+              💡 للاستفسار: <a href="tel:0524392060" style="color:var(--pink);font-weight:800">0524 39 20 60</a> /
+              <a href="tel:0677659639" style="color:var(--pink);font-weight:800">06 77 65 96 39</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- طلب التسجيل -->
+      <div class="tab-panel" data-panel="reg">
+        <div class="success-box" id="regSuccess"></div>
+        <div class="card">
+          <h3 style="color:var(--navy);margin-bottom:16px">استمارة طلب التسجيل</h3>
+          <form class="pub-form" data-pub="registration">
+            <div class="field"><label>الاسم الكامل للطفل *</label><input type="text" name="childName" required placeholder="الاسم والنسب"></div>
+            <div class="field"><label>تاريخ الميلاد *</label><input type="date" name="dob" required></div>
+            <div class="field"><label>الجنس</label>
+              <select name="gender"><option value="ذكر">ذكر</option><option value="أنثى">أنثى</option></select>
+            </div>
+            <div class="field"><label>اسم ولي الأمر *</label><input type="text" name="guardian" required></div>
+            <div class="field"><label>صلة القرابة</label>
+              <select name="relation"><option>الأب</option><option>الأم</option><option>ولي آخر</option></select>
+            </div>
+            <div class="field"><label>الهاتف *</label><input type="tel" name="phone" required placeholder="06XXXXXXXX"></div>
+            <div class="field"><label>البريد الإلكتروني</label><input type="email" name="email" placeholder="example@mail.com"></div>
+            <div class="field"><label>المدينة</label><input type="text" name="city"></div>
+            <div class="field full"><label>ملاحظات إضافية حول حالة الطفل</label><textarea name="note" placeholder="معلومات ترون أنها مفيدة لفريق المركز"></textarea></div>
+            <div class="full" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+              <button type="submit" class="btn btn-pink">إرسال طلب التسجيل</button>
+              <span class="form-note" style="margin:0">سيتم التواصل معكم من طرف إدارة المركز بعد دراسة الطلب.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ملف المستفيد -->
+      <div class="tab-panel" data-panel="file">
+        <div class="card">
+          <h3 style="color:var(--navy);margin-bottom:8px">الاطلاع على ملف المستفيد</h3>
+          <p style="color:var(--muted);font-size:.88rem">أدخل رقم الملف الذي تسلّمتموه من إدارة المركز.</p>
+          <form class="pub-form" id="fileForm" style="margin-top:14px">
+            <div class="field"><label>رقم الملف</label><input type="text" id="fileInput" placeholder="T21-0001"></div>
+            <div class="field" style="justify-content:flex-end"><button type="submit" class="btn btn-navy">بحث</button></div>
+          </form>
+          <div id="fileResult" style="margin-top:20px"></div>
+        </div>
+      </div>
+
+      <!-- تتبع الاستفادة -->
+      <div class="tab-panel" data-panel="track">
+        <div class="card">
+          <h3 style="color:var(--navy);margin-bottom:8px">تتبّع الاستفادة</h3>
+          <p style="color:var(--muted);font-size:.88rem">تتبّع وضعية ملف المستفيد، المواعيد والأنشطة المسجّلة.</p>
+          <form class="pub-form" id="trackForm" style="margin-top:14px">
+            <div class="field"><label>رقم الملف</label><input type="text" id="trackInput" placeholder="T21-0001"></div>
+            <div class="field" style="justify-content:flex-end"><button type="submit" class="btn btn-navy">تتبّع</button></div>
+          </form>
+          <div id="trackResult" style="margin-top:20px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="section alt" id="team">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">الطاقم</span>
+      <h2>الفريق المسيّر للمركز</h2>
+      <p>الطاقم الإداري والتربوي والمتخصص الذي يؤطّر أبناءنا داخل المركز.</p>
+    </div>
+
+    <div data-tabs="team">
+      <div class="tabs">
+        <button class="tab active" data-tab="admin" type="button">الإدارة</button>
+        <button class="tab" data-tab="educators" type="button">المربون</button>
+        <button class="tab" data-tab="specialists" type="button">الأطر المتخصصة</button>
+        <button class="tab" data-tab="volunteers" type="button">المتطوعون</button>
+      </div>
+      <div class="tab-panel active" data-panel="admin" id="teamAdmin"></div>
+      <div class="tab-panel" data-panel="educators" id="teamEducators"></div>
+      <div class="tab-panel" data-panel="specialists" id="teamSpecialists"></div>
+      <div class="tab-panel" data-panel="volunteers" id="teamVolunteers"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACTIVITIES ================= -->
+<section class="section" id="activities">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">الأنشطة</span>
+      <h2>أنشطة المركز</h2>
+      <p>الأنشطة اليومية، الورشات، الرحلات، الأنشطة الرياضية والثقافية والفنية.</p>
+    </div>
+    <div class="chips" data-filters="activities" style="justify-content:center;margin-bottom:26px">
+      <button class="chip active" data-filter="all" type="button">كل الأنشطة</button>
+      <button class="chip" data-filter="daily" type="button">الأنشطة اليومية</button>
+      <button class="chip" data-filter="workshops" type="button">الورشات</button>
+      <button class="chip" data-filter="trips" type="button">الرحلات</button>
+      <button class="chip" data-filter="sport" type="button">الأنشطة الرياضية</button>
+      <button class="chip" data-filter="culture" type="button">الأنشطة الثقافية والفنية</button>
+    </div>
+    <div id="activitiesGrid"></div>
+  </div>
+</section>
+
+<!-- ================= ANNOUNCEMENTS ================= -->
+<section class="section alt" id="announcements">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">آخر المستجدات</span>
+      <h2>الإعلانات</h2>
+      <p>مواعيد الأنشطة، التسجيلات والإعلانات المهمة المنشورة من طرف إدارة المركز.</p>
+    </div>
+    <div class="chips" data-filters="announcements" style="justify-content:center;margin-bottom:26px">
+      <button class="chip active" data-filter="all" type="button">الكل</button>
+      <button class="chip" data-filter="schedule" type="button">مواعيد الأنشطة</button>
+      <button class="chip" data-filter="registrations" type="button">التسجيلات</button>
+      <button class="chip" data-filter="important" type="button">الإعلانات المهمة</button>
+    </div>
+    <div class="ann-list" id="annList"></div>
+  </div>
+</section>
+
+<!-- ================= FAMILY SPACE ================= -->
+<section class="section" id="family">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">فضاء الأسرة</span>
+      <h2>تواصل الأسر مع المركز</h2>
+      <p>اختاروا نوع الطلب واملؤوا الاستمارة، وسيتواصل معكم فريق المركز في أقرب وقت.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <h3 style="color:var(--navy);margin-bottom:16px">استمارة الطلب</h3>
+        <form class="pub-form" data-pub="family">
+          <input type="hidden" name="requestType" id="famType" value="طلب معلومات">
+          <div class="full chips" data-famtype>
+            <button type="button" class="chip active" data-ftype="طلب معلومات">طلب معلومات</button>
+            <button type="button" class="chip" data-ftype="طلب موعد">طلب موعد</button>
+            <button type="button" class="chip" data-ftype="طلب الاستفادة">طلب الاستفادة</button>
+            <button type="button" class="chip" data-ftype="التواصل مع الإدارة">التواصل مع الإدارة</button>
+          </div>
+          <div class="field"><label>الاسم الكامل *</label><input type="text" name="name" required></div>
+          <div class="field"><label>الهاتف *</label><input type="tel" name="phone" required></div>
+          <div class="field"><label>البريد الإلكتروني</label><input type="email" name="email"></div>
+          <div class="field" id="famDateField" style="display:none"><label>التاريخ المقترح للموعد</label><input type="date" name="prefDate"></div>
+          <div class="field full"><label>الموضوع / الرسالة</label><textarea name="message" placeholder="اكتبوا رسالتكم هنا..."></textarea></div>
+          <div class="full"><button type="submit" class="btn btn-pink">إرسال الطلب</button></div>
+        </form>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;gap:14px">
+        <h3 style="color:var(--navy)">تواصل سريع</h3>
+        <div class="mini-card"><span>☎</span><div><b>الهاتف الثابت</b><small>0524 39 20 60</small></div></div>
+        <div class="mini-card"><span>📱</span><div><b>الهاتف المحمول</b><small>06 77 65 96 39</small></div></div>
+        <div class="mini-card"><span>✉</span><div><b>البريد الإلكتروني</b><small>ass.abnaouna@hotmail.com</small></div></div>
+        <a class="btn btn-pink" href="https://wa.me/212677659639" target="_blank" rel="noopener" style="margin-top:6px">💬 مراسلة عبر واتساب</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MEDIA ================= -->
+<section class="section alt" id="media">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">الصور والفيديوهات</span>
+      <h2>أرشيف المركز</h2>
+      <p>معرض الصور وفيديوهات الأنشطة المنشورة من طرف إدارة المركز.</p>
+    </div>
+    <div data-tabs="media">
+      <div class="tabs">
+        <button class="tab active" data-tab="photos" type="button">معرض الصور</button>
+        <button class="tab" data-tab="videos" type="button">فيديوهات الأنشطة</button>
+      </div>
+      <div class="tab-panel active" data-panel="photos" id="photosPanel"></div>
+      <div class="tab-panel" data-panel="videos" id="videosPanel"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VOLUNTEER ================= -->
+<section class="section" id="volunteer">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">التطوع</span>
+      <h2>كن متطوعاً معنا</h2>
+      <p>وقتكم ومهاراتكم تصنع فرقاً كبيراً في حياة أبنائنا.</p>
+    </div>
+
+    <div class="grid g3" style="margin-bottom:30px">
+      <div class="card"><div class="service-icon">🧑‍🏫</div><h3 style="color:var(--navy);font-size:1.05rem">المواكبة التربوية</h3><p style="color:var(--muted);font-size:.87rem">مساعدة المربين في الأنشطة اليومية ومواكبة الأطفال.</p></div>
+      <div class="card"><div class="service-icon">🎨</div><h3 style="color:var(--navy);font-size:1.05rem">التنشيط الثقافي والفني</h3><p style="color:var(--muted);font-size:.87rem">تأطير ورشات الرسم والموسيقى والمسرح.</p></div>
+      <div class="card"><div class="service-icon">⚽</div><h3 style="color:var(--navy);font-size:1.05rem">الأنشطة الرياضية</h3><p style="color:var(--muted);font-size:.87rem">تنظيم الأنشطة الحركية والرياضية الترفيهية.</p></div>
+      <div class="card"><div class="service-icon">🗂️</div><h3 style="color:var(--navy);font-size:1.05rem">الدعم الإداري</h3><p style="color:var(--muted);font-size:.87rem">المساعدة في التدبير والتوثيق والأرشفة.</p></div>
+      <div class="card"><div class="service-icon">💻</div><h3 style="color:var(--navy);font-size:1.05rem">التواصل والمعلوميات</h3><p style="color:var(--muted);font-size:.87rem">تصميم وتدبير المحتوى الرقمي للمركز.</p></div>
+      <div class="card"><div class="service-icon">🚌</div><h3 style="color:var(--navy);font-size:1.05rem">الرحلات والتظاهرات</h3><p style="color:var(--muted);font-size:.87rem">التحضير والمواكبة في الرحلات والمناسبات.</p></div>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--navy);margin-bottom:16px">استمارة التسجيل كمتطوع</h3>
+      <form class="pub-form" data-pub="volunteer">
+        <div class="field"><label>الاسم الكامل *</label><input type="text" name="name" required></div>
+        <div class="field"><label>الهاتف *</label><input type="tel" name="phone" required></div>
+        <div class="field"><label>البريد الإلكتروني</label><input type="email" name="email"></div>
+        <div class="field"><label>مجال التطوع *</label>
+          <select name="area" required>
+            <option>المواكبة التربوية</option>
+            <option>التنشيط الثقافي والفني</option>
+            <option>الأنشطة الرياضية</option>
+            <option>الدعم الإداري</option>
+            <option>التواصل والمعلوميات</option>
+            <option>الرحلات والتظاهرات</option>
+          </select>
+        </div>
+        <div class="field"><label>التخصص / المهنة</label><input type="text" name="spec"></div>
+        <div class="field"><label>أوقات التوفّر</label><input type="text" name="availability" placeholder="مثال: السبت صباحاً"></div>
+        <div class="field full"><label>رسالة أو ملاحظات</label><textarea name="message"></textarea></div>
+        <div class="full"><button type="submit" class="btn btn-pink">إرسال طلب التطوع</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTNERS & SUPPORT ================= -->
+<section class="section alt" id="partners">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">الشراكات والدعم</span>
+      <h2>الشركاء والداعمون</h2>
+      <p>نفتح أبوابنا لكل مؤسسة أو شخص يرغب في دعم مسيرة المركز وأبنائه.</p>
+    </div>
+
+    <div id="partnersList" style="margin-bottom:30px"></div>
+
+    <div class="grid g2">
+      <div class="card" id="partnership-form">
+        <h3 style="color:var(--navy);margin-bottom:16px">طلب شراكة</h3>
+        <form class="pub-form" data-pub="partnership">
+          <div class="field"><label>اسم المؤسسة / الجمعية *</label><input type="text" name="org" required></div>
+          <div class="field"><label>نوع الشراكة *</label>
+            <select name="partnershipType" required>
+              <option>شراكة مؤسساتية</option>
+              <option>شراكة تربوية</option>
+              <option>رعاية الأنشطة</option>
+              <option>دعم عيني</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+          <div class="field"><label>الشخص المسؤول *</label><input type="text" name="contact" required></div>
+          <div class="field"><label>الهاتف *</label><input type="tel" name="phone" required></div>
+          <div class="field"><label>البريد الإلكتروني</label><input type="email" name="email"></div>
+          <div class="field full"><label>تفاصيل الطلب</label><textarea name="details"></textarea></div>
+          <div class="full"><button type="submit" class="btn btn-pink">إرسال طلب الشراكة</button></div>
+        </form>
+      </div>
+
+      <div style="display:grid;gap:20px">
+        <div class="card" id="support">
+          <h3 style="color:var(--navy);margin-bottom:12px">دعم المركز 💗</h3>
+          <p style="color:var(--muted);font-size:.88rem">دعمكم يساعدنا على تغطية مصاريف التأطير والأنشطة واللوازم البيداغوجية.</p>
+          <ul class="check-list" style="margin-top:12px">
+            <li>دعم مالي تحويل بنكي / شيك باسم الجمعية</li>
+            <li>دعم نقدي بمقر المركز مقابل وصل</li>
+            <li>دعم عيني (لوازم مدرسية، ألعاب تربوية، تجهيزات)</li>
+            <li>رعاية أنشطة أو رحلات أو تظاهرات</li>
+          </ul>
+          <div class="info-box" style="margin-top:14px">
+            ℹ️ للحصول على المعطيات البنكية والمستندات الإدارية، يرجى التواصل مع إدارة المركز:
+            <a href="tel:0677659639" style="color:var(--pink);font-weight:800">06 77 65 96 39</a>
+          </div>
+        </div>
+
+        <div class="card" id="equipment-form">
+          <h3 style="color:var(--navy);margin-bottom:16px">التبرع بالمعدات واللوازم</h3>
+          <form class="pub-form" data-pub="equipment">
+            <div class="field"><label>اسم المتبرع *</label><input type="text" name="donor" required></div>
+            <div class="field"><label>الهاتف *</label><input type="tel" name="phone" required></div>
+            <div class="field"><label>نوع التبرع *</label>
+              <select name="itemType" required>
+                <option>لوازم مدرسية وبيداغوجية</option>
+                <option>ألعاب تربوية</option>
+                <option>تجهيزات معلوماتية</option>
+                <option>أثاث</option>
+                <option>ملابس ومستلزمات</option>
+                <option>أخرى</option>
+              </select>
+            </div>
+            <div class="field"><label>الكمية</label><input type="text" name="qty"></div>
+            <div class="field full"><label>وصف التبرع</label><textarea name="description"></textarea></div>
+            <div class="full"><button type="submit" class="btn btn-navy">إرسال عرض التبرع</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">تواصل معنا</span>
+      <h2>نحن في خدمتكم</h2>
+      <p>لأي استفسار أو طلب معلومات، لا تترددوا في التواصل معنا عبر القنوات التالية.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="c-card">
+        <div class="c-ico">☎</div>
+        <div><b>الهاتف</b><a href="tel:0524392060">0524 39 20 60</a></div>
+      </div>
+      <div class="c-card">
+        <div class="c-ico">📱</div>
+        <div><b>الهاتف المحمول</b><a href="tel:0677659639">06 77 65 96 39</a></div>
+      </div>
+      <div class="c-card">
+        <div class="c-ico">✉</div>
+        <div><b>البريد الإلكتروني</b><a href="mailto:ass.abnaouna@hotmail.com">ass.abnaouna@hotmail.com</a></div>
+      </div>
+      <div class="c-card">
+        <div class="c-ico">🌐</div>
+        <div><b>الموقع الإلكتروني القديم</b><a href="https://associationabnaouna21.unblog.fr" target="_blank" rel="noopener">associationabnaouna21.unblog.fr</a></div>
+      </div>
+      <div class="c-card">
+        <div class="c-ico">📍</div>
+        <div><b>العنوان</b><span>يتم تحديد العنوان الدقيق للمقر من طرف إدارة المركز.</span></div>
+      </div>
+      <div class="c-card">
+        <div class="c-ico">💬</div>
+        <div><b>واتساب</b><a href="https://wa.me/212677659639" target="_blank" rel="noopener">06 77 65 96 39 — مراسلة مباشرة</a></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:22px">
+      <h3 style="color:var(--navy);margin-bottom:6px">صفحات التواصل الاجتماعي</h3>
+      <p style="color:var(--muted);font-size:.85rem">يتكفّل فريق المركز بإضافة روابط الصفحات الرسمية.</p>
+      <div class="socials">
+        <button type="button" data-social="فيسبوك" title="فيسبوك">f</button>
+        <button type="button" data-social="إنستغرام" title="إنستغرام">◎</button>
+        <button type="button" data-social="يوتيوب" title="يوتيوب">▶</button>
+        <button type="button" data-social="لينكدإن" title="لينكدإن">in</button>
+        <button type="button" data-social="تيك توك" title="تيك توك">♪</button>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      <iframe title="خريطة المقر" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-8.10%2C31.58%2C-7.90%2C31.70&amp;layer=mapnik"></iframe>
+    </div>
+    <p class="form-note" style="text-align:center;margin-top:10px">الخريطة تقريبية — يتم تحديث الموقع الدقيق من طرف إدارة المركز.</p>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <div class="f-brand">
+          <svg class="logo-mark" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="64" cy="20" r="13" fill="#ff5aa8"/>
+            <path d="M24 76 L48 44 H70 L96 28" fill="none" stroke="#ff5aa8" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="18" y="106" font-family="Cairo, sans-serif" font-size="48" font-weight="900" fill="#ffffff">2</text>
+            <text x="60" y="106" font-family="Cairo, sans-serif" font-size="48" font-weight="900" fill="#ffffff">1</text>
+          </svg>
+          <b>أبناؤنا T21</b>
+        </div>
+        <p>مركز تابع لجمعية أبناؤنا لمتلازمة داون 21، يعمل على التربية والتأهيل والدعم النفسي والاجتماعي والإدماج المدرسي والاجتماعي للأطفال ذوي متلازمة داون.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <a href="#about">عن المركز</a>
+        <a href="#services">خدمات المركز</a>
+        <a href="#activities">الأنشطة</a>
+        <a href="#announcements">الإعلانات</a>
+        <a href="#media">الصور والفيديوهات</a>
+      </div>
+      <div>
+        <h4>خدمات الأسر</h4>
+        <a href="#beneficiaries" data-tablink="reg">طلب التسجيل</a>
+        <a href="#beneficiaries" data-tablink="file">ملف المستفيد</a>
+        <a href="#beneficiaries" data-tablink="track">تتبع الاستفادة</a>
+        <a href="#family">فضاء الأسرة</a>
+        <a href="#volunteer">التطوع</a>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+        <a href="tel:0524392060">☎ 0524 39 20 60</a>
+        <a href="tel:0677659639">📱 06 77 65 96 39</a>
+        <a href="mailto:ass.abnaouna@hotmail.com">✉ ass.abnaouna@hotmail.com</a>
+        <a href="https://associationabnaouna21.unblog.fr" target="_blank" rel="noopener">🌐 associationabnaouna21.unblog.fr</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="year"></span> مركز أبناؤنا T21 — جميع الحقوق محفوظة.</span>
+      <button class="tb-admin" id="openLogin2" style="border-color:rgba(255,255,255,.3)">🔒 لوحة الإدارة</button>
+    </div>
+  </div>
+</footer>
+
+<button class="float-wa" id="waBtn" title="واتساب" aria-label="واتساب">💬</button>
+<button class="to-top" id="toTop" title="أعلى الصفحة" aria-label="أعلى الصفحة">↑</button>
+<div class="toast" id="toast"></div>
+
+<!-- ================= LOGIN MODAL ================= -->
+<div class="modal" id="loginModal">
+  <div class="modal-card">
+    <div class="lock">🔒</div>
+    <h3>لوحة الإدارة</h3>
+    <p>هذه المساحة مخصصة لإدارة المركز. المرجو إدخال الرقم السري.</p>
+    <form id="loginForm">
+      <input type="password" id="adminPass" placeholder="••••••" autocomplete="off">
+      <div class="err" id="loginErr"></div>
+      <div class="modal-actions">
+        <button type="submit" class="btn btn-pink">دخول</button>
+        <button type="button" class="btn btn-ghost" id="closeLogin">إلغاء</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ================= ADMIN PANEL ================= -->
+<div class="admin-overlay" id="adminPanel">
+  <div class="admin-top">
+    <h3>🔧 لوحة إدارة مركز أبناؤنا T21</h3>
+    <span class="a-user">الإدارة</span>
+    <div class="spacer"></div>
+    <button class="btn btn-pink btn-sm" id="adminViewSite">عرض الموقع</button>
+    <button class="btn btn-ghost btn-sm" id="adminLogout">خروج</button>
+  </div>
+  <div class="admin-body-wrap">
+    <aside class="admin-side" id="adminNav"></aside>
+    <section class="admin-main" id="adminBody"></section>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   HELPERS
+============================================================ */
+const $  = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid = () => 'id' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+const todayISO = () => new Date().toISOString().slice(0, 10);
+function fmtDate(d){
+  if(!d) return '';
+  const dt = new Date(d);
+  if(isNaN(dt.getTime())) return d;
+  try { return dt.toLocaleDateString('ar', {year:'numeric', month:'long', day:'numeric'}); }
+  catch(e){ return d; }
+}
+let toastTimer;
+function toast(msg){
+  const t = $('#toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3200);
+}
+
+/* ============================================================
+   STATE
+============================================================ */
+const STORAGE_KEY = 'abnaouna_t21_state_v1';
+
+function defaultState(){
+  return {
+    beneficiaries: [],       // {id,fileNo,name,dob,gender,guardian,phone,note,status,createdAt}
+    staff: [],               // {id,name,role,spec,phone}
+    appointments: [],        // {id,title,date,time,place,person}
+    registrations: [],       // {id,ref,childName,dob,gender,guardian,relation,phone,email,city,note,status,createdAt}
+    attendance: [],          // {id,beneficiaryId,activityId,date,status}
+    activities: [],          // {id,title,cat,date,place,desc,image}
+    announcements: [
+      { id:'a1', cat:'registrations', title:'باب التسجيل مفتوح', important:true,
+        body:'يمكن لأولياء الأمور تقديم طلب التسجيل عبر استمارة «طلب التسجيل» في هذه المنصة أو بالاتصال بإدارة المركز. تتم دراسة الطلبات من طرف الإدارة.' },
+      { id:'a2', cat:'schedule', title:'مواعيد الأنشطة', important:false,
+        body:'يتم تحديد مواعيد الأنشطة الأسبوعية من طرف إدارة المركز. تابعوا هذه المساحة للاطلاع على آخر المواعيد.' },
+      { id:'a3', cat:'important', title:'تحديث بيانات التواصل', important:true,
+        body:'ندعو أولياء الأمور إلى إخبار إدارة المركز بأي تغيير في معلومات التواصل الخاصة بهم لضمان حسن تتبع ملفات المستفيدين.' }
+    ],
+    media: [],               // {id,title,type:'photo'|'video',url,desc}
+    requests: [],            // {id,type,name,phone,email,prefDate,message,status,createdAt}
+    volunteers: [],          // {id,name,phone,email,area,spec,availability,message,status,createdAt}
+    partners: [],            // {id,name,type,note}
+    partnershipRequests: [], // {id,org,partnershipType,contact,phone,email,details,status,createdAt}
+    equipmentDonations: []   // {id,donor,phone,itemType,qty,description,createdAt}
+  };
+}
+
+let state;
+try {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  state = raw ? JSON.parse(raw) : defaultState();
+  // تضمين المفاتيح الناقصة
+  const d = defaultState();
+  Object.keys(d).forEach(k => { if(state[k] === undefined) state[k] = d[k]; });
+} catch(e){ state = defaultState(); }
+
+function save(){
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){}
+}
+
+/* ============================================================
+   STATIC DATA
+============================================================ */
+const SERVICES = [
+  { id:'edu', icon:'🎓', title:'التربية والتأهيل',
+    short:'برامج تربوية وتأهيلية فردية تُبنى حسب قدرات كل طفل واحتياجاته.',
+    points:['تقييم أوّلي لمستوى الطفل','برنامج فردي للتأهيل','تتبّع دوري لتطوّر المهارات','تنسيق مع الأسرة'] },
+  { id:'psy', icon:'💗', title:'الدعم النفسي والاجتماعي',
+    short:'مواكبة نفسية واجتماعية للطفل وأسرته لتعزيز الثقة والاستقلالية.',
+    points:['جلسات دعم نفسي','العمل على الثقة بالنفس','مواكبة اجتماعية للأسر','توجيه وإرشاد'] },
+  { id:'ped', icon:'📚', title:'الأنشطة التربوية',
+    short:'أنشطة تربوية موجّهة تُنمّي المهارات اللغوية والذهنية والحركية.',
+    points:['ورشات تربوية موجّهة','أنشطة لتنمية التركيز','ألعاب بيداغوجية','مهارات الاستقلالية اليومية'] },
+  { id:'sport', icon:'⚽', title:'الأنشطة الرياضية',
+    short:'أنشطة حركية ورياضية تنمّي التناسق الحركي والروح الجماعية.',
+    points:['أنشطة حركية ملائمة','تنمية التناسق الحركي','اللعب الجماعي','تظاهرات رياضية ترفيهية'] },
+  { id:'art', icon:'🎨', title:'الأنشطة الفنية',
+    short:'ورشات فنية وإبداعية تُتيح للطفل التعبير عن ذاته بكل حرية.',
+    points:['ورشة الرسم والتلوين','ورشة الموسيقى والإيقاع','ورشة المسرح والتعبير الجسدي','معارض فنية للمركز'] },
+  { id:'inclusion', icon:'🏫', title:'الإدماج المدرسي والاجتماعي',
+    short:'جسور مع المؤسسات التعليمية والوسط الاجتماعي لتيسير الإدماج.',
+    points:['تنسيق مع المؤسسات التعليمية','مواكبة الإدماج بالمدرسة','تحسيس المحيط والوسط','أنشطة اندماجية مشتركة'] },
+  { id:'family', icon:'👨‍👩‍👧', title:'مواكبة الأسر',
+    short:'مواكبة وتكوين وإرشاد الأسرة لتكون شريكاً أساسياً في التأهيل.',
+    points:['لقاءات دورية مع الأسر','تكوين وتأطير الأولياء','توجيه وإرشاد تربوي','فضاء للتبادل والدعم'] }
+];
+
+const ACT_CATS = {
+  daily:'الأنشطة اليومية', workshops:'الورشات', trips:'الرحلات',
+  sport:'الأنشطة الرياضية', culture:'الأنشطة الثقافية والفنية'
+};
+const ACT_ICONS = { daily:'🧩', workshops:'🛠️', trips:'🚌', sport:'⚽', culture:'🎭' };
+const ANN_CATS = { schedule:'مواعيد الأنشطة', registrations:'التسجيلات', important:'الإعلانات المهمة' };
+const ANN_ICONS = { schedule:'🗓️', registrations:'📝', important:'📢' };
+const STAFF_ROLES = { admin:'الإدارة', educators:'المربون', specialists:'الأطر المتخصصة', volunteers:'المتطوعون' };
+
+let actFilter = 'all';
+let annFilter = 'all';
+let currentSection = 'overview';
+
+/* ============================================================
+   PUBLIC RENDERING
+============================================================ */
+function renderStats(){
+  $('#statBenef').textContent = state.beneficiaries.length;
+  const staffCount = 2 + state.staff.length;
+  $('#statStaff').textContent = staffCount;
+  $('#statActivities').textContent = state.activities.length;
+  $('#statVolunteers').textContent = state.volunteers.length;
+}
+
+function renderServices(){
+  $('#servicesGrid').innerHTML = SERVICES.map(s => `
+    <article class="card service-card" id="svc-${s.id}">
+      <div class="service-icon">${s.icon}</div>
+      <h3>${s.title}</h3>
+      <p>${s.short}</p>
+      <button class="link-btn" type="button" data-toggle-details="${s.id}">التفاصيل <span>▾</span></button>
+      <ul class="service-details" id="det-${s.id}">
+        ${s.points.map(p => `<li>${p}</li>`).join('')}
+      </ul>
+    </article>`).join('');
+}
+
+function emptyState(icon, title, text, hint){
+  return `<div class="empty">
+    <div class="empty-icon">${icon}</div>
+    <h4>${title}</h4>
+    <p>${text}</p>
+    ${hint ? `<small>${hint}</small>` : ''}
+  </div>`;
+}
+
+function renderActivities(){
+  const list = state.activities.filter(a => actFilter === 'all' || a.cat === actFilter);
+  const wrap = $('#activitiesGrid');
+  if(!list.length){
+    wrap.innerHTML = emptyState('🗂️','لا توجد أنشطة منشورة حالياً',
+      'يتم إدراج الأنشطة والصور الخاصة بها من طرف إدارة المركز.',
+      'هذه المساحة تبقى فارغة حتى يتم ملؤها من طرف الإدارة.');
+    return;
+  }
+  wrap.innerHTML = `<div class="act-grid">${list.map(a => `
+    <article class="act-card">
+      <div class="act-thumb">${a.image ? `<img src="${esc(a.image)}" alt="${esc(a.title)}">` : (ACT_ICONS[a.cat] || '🎯')}</div>
+      <div class="act-body">
+        <span class="badge">${ACT_CATS[a.cat] || 'نشاط'}</span>
+        <h4>${esc(a.title)}</h4>
+        ${a.desc ? `<p>${esc(a.desc)}</p>` : ''}
+        <div class="act-meta">
+          ${a.date ? `<span>📅 ${fmtDate(a.date)}</span>` : ''}
+          ${a.place ? `<span>📍 ${esc(a.place)}</span>` : ''}
+        </div>
+      </div>
+    </article>`).join('')}</div>`;
+}
+
+function renderAnnouncements(){
+  const list = state.announcements.filter(a => annFilter === 'all' || a.cat === annFilter);
+  const wrap = $('#annList');
+  if(!list.length){
+    wrap.innerHTML = emptyState('📢','لا توجد إعلانات في هذا التصنيف',
+      'يتم نشر الإعلانات من طرف إدارة المركز.', null);
+    return;
+  }
+  wrap.innerHTML = list.map(a => `
+    <article class="ann">
+      <div class="ann-ico">${ANN_ICONS[a.cat] || '📢'}</div>
+      <div style="flex:1">
+        <h4>${esc(a.title)} ${a.important ? '<span class="badge" style="margin-inline-start:6px">مهم</span>' : ''}</h4>
+        <p>${esc(a.body)}</p>
+        <div class="ann-meta">
+          <span class="badge navy">${ANN_CATS[a.cat] || 'إعلان'}</span>
+          <span style="font-size:.75rem;color:var(--muted);font-weight:700">منشور من طرف إدارة المركز</span>
+        </div>
+      </div>
+    </article>`).join('');
+}
+
+function memberCard(name, role, spec, navy){
+  const initial = (name || '؟').trim().charAt(0);
+  return `<div class="member">
+    <div class="avatar ${navy ? 'navy' : ''}">${esc(initial)}</div>
+    <b>${esc(name)}</b>
+    <span>${esc(role)}</span>
+    ${spec ? `<small>${esc(spec)}</small>` : ''}
+  </div>`;
+}
+
+function renderTeam(){
+  const adminFixed = [
+    { name:'لالة فاطمة روكاني', role:'رئيسة المركز', spec:'الرئاسة والتوجيه' },
+    { name:'نور بلعيساوي', role:'مديرة المركز', spec:'التدبير والتنسيق' }
+  ];
+  $('#teamAdmin').innerHTML = `<div class="members">${adminFixed.map(m => memberCard(m.name, m.role, m.spec, false)).join('')}</div>`;
+
+  const educators = state.staff.filter(s => s.role === 'educators');
+  $('#teamEducators').innerHTML = educators.length
+    ? `<div class="members">${educators.map(s => memberCard(s.name, 'مربٍّ / مربية', s.spec, true)).join('')}</div>`
+    : emptyState('🧑‍🏫','لا توجد بيانات منشورة بعد',
+        'يتم إدماج المربين والمربيات من طرف إدارة المركز.',
+        'تُملأ هذه المساحة من طرف الإدارة عبر لوحة الإدارة.');
+
+  const specialists = state.staff.filter(s => s.role === 'specialists');
+  $('#teamSpecialists').innerHTML = specialists.length
+    ? `<div class="members">${specialists.map(s => memberCard(s.name, 'إطار متخصص', s.spec, true)).join('')}</div>`
+    : emptyState('🧠','لا توجد بيانات منشورة بعد',
+        'يتم إدماج الأطر المتخصصة من طرف إدارة المركز.',
+        'تُملأ هذه المساحة من طرف الإدارة عبر لوحة الإدارة.');
+
+  $('#teamVolunteers').innerHTML = state.volunteers.length
+    ? `<div class="members">${state.volunteers.map(v => memberCard(v.name, 'متطوع / متطوعة', v.area, true)).join('')}</div>`
+    : emptyState('🤝','لا يوجد متطوعون مسجّلون حالياً',
+        'يتم إدماج المتطوعين بعد دراسة طلباتهم من طرف إدارة المركز.',
+        'يمكنكم الترشح عبر استمارة التطوع.');
+}
+
+function renderMedia(){
+  const photos = state.media.filter(m => m.type === 'photo');
+  const videos = state.media.filter(m => m.type === 'video');
+
+  $('#photosPanel').innerHTML = photos.length
+    ? `<div class="gallery">${photos.map(p => `
+        <div class="g-item">
+          ${p.url ? `<img src="${esc(p.url)}" alt="${esc(p.title)}">` : `<div class="g-video">🖼️</div>`}
+          <div class="g-cap">${esc(p.title)}</div>
+        </div>`).join('')}</div>`
+    : emptyState('📷','لا توجد صور منشورة حالياً',
+        'يتم إدراج صور الأنشطة من طرف إدارة المركز.',
+        'تبقى هذه المساحة فارغة حتى يتم ملؤها من طرف الإدارة.');
+
+  $('#videosPanel').innerHTML = videos.length
+    ? `<div class="gallery">${videos.map(v => `
+        <div class="g-item">
+          <div class="g-video">▶️</div>
+          <div class="g-cap">${esc(v.title)}${v.url ? ` — <a href="${esc(v.url)}" target="_blank" rel="noopener" style="color:var(--pink)">مشاهدة</a>` : ''}</div>
+        </div>`).join('')}</div>`
+    : emptyState('🎬','لا توجد فيديوهات منشورة حالياً',
+        'يتم إدراج فيديوهات الأنشطة من طرف إدارة المركز.',
+        'تبقى هذه المساحة فارغة حتى يتم ملؤها من طرف الإدارة.');
+}
+
+function renderPartners(){
+  const wrap = $('#partnersList');
+  if(!state.partners.length){
+    wrap.innerHTML = emptyState('🏛️','لائحة الشركاء تُنشر من طرف الإدارة',
+      'سيتم إدراج أسماء الشركاء والداعمين هنا بعد تأكيد الشراكات.',
+      'يمكنكم تقديم طلب شراكة عبر الاستمارة أسفله.');
+    return;
+  }
+  wrap.innerHTML = `<div class="grid g3">${state.partners.map(p => `
+    <div class="card" style="text-align:center">
+      <div class="avatar navy" style="margin-bottom:12px">${esc((p.name||'؟').charAt(0))}</div>
+      <b style="color:var(--navy);font-family:'El Messiri'">${esc(p.name)}</b>
+      <p style="color:var(--muted);font-size:.82rem;margin-top:6px">${esc(p.type || 'شريك')}</p>
+      ${p.note ? `<p style="color:var(--muted);font-size:.8rem">${esc(p.note)}</p>` : ''}
+    </div>`).join('')}</div>`;
+}
+
+function renderPublic(){
+  renderStats();
+  renderActivities();
+  renderAnnouncements();
+  renderTeam();
+  renderMedia();
+  renderPartners();
+}
+
+/* ============================================================
+   NAVIGATION / TABS / FILTERS
+============================================================ */
+function closeAllMenus(){
+  $$('.nav-item').forEach(i => i.classList.remove('open'));
+  $('#mainNav').classList.remove('open');
+  $('#scrim').classList.remove('show');
+  $('#burger').setAttribute('aria-expanded', 'false');
+}
+
+function activateTab(group, key){
+  const root = document.querySelector('[data-tabs="' + group + '"]');
+  if(!root) return;
+  root.querySelectorAll('[data-tab]').forEach(b => b.classList.toggle('active', b.dataset.tab === key));
+  root.querySelectorAll('[data-panel]').forEach(p => p.classList.toggle('active', p.dataset.panel === key));
+}
+
+function flash(el){
+  el.classList.remove('flash');
+  void el.offsetWidth;
+  el.classList.add('flash');
+  setTimeout(() => el.classList.remove('flash'), 1900);
+}
+
+document.addEventListener('click', function(e){
+  /* burger */
+  if(e.target.closest('#burger')){
+    const nav = $('#mainNav');
+    const open = nav.classList.toggle('open');
+    $('#scrim').classList.toggle('show', open);
+    $('#burger').setAttribute('aria-expanded', String(open));
+    return;
+  }
+  if(e.target.closest('#scrim')){ closeAllMenus(); return; }
+
+  /* dropdown toggle */
+  const dropBtn = e.target.closest('.nav-link.has-drop');
+  if(dropBtn){
+    e.preventDefault();
+    const item = dropBtn.closest('.nav-item');
+    const wasOpen = item.classList.contains('open');
+    $$('.nav-item').forEach(i => i.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+    return;
+  }
+
+  /* tabs */
+  const tabBtn = e.target.closest('[data-tab]');
+  if(tabBtn && tabBtn.closest('[data-tabs]')){
+    activateTab(tabBtn.closest('[data-tabs]').dataset.tabs, tabBtn.dataset.tab);
+    return;
+  }
+
+  /* filters */
+  const chip = e.target.closest('[data-filter]');
+  if(chip && chip.closest('[data-filters]')){
+    const group = chip.closest('[data-filters]');
+    group.querySelectorAll('[data-filter]').forEach(c => c.classList.toggle('active', c === chip));
+    const g = group.dataset.filters;
+    if(g === 'activities'){ actFilter = chip.dataset.filter; renderActivities(); }
+    if(g === 'announcements'){ annFilter = chip.dataset.filter; renderAnnouncements(); }
+    return;
+  }
+
+  /* service details toggle */
+  const det = e.target.closest('[data-toggle-details]');
+  if(det){
+    const list = document.getElementById('det-' + det.dataset.toggleDetails);
+    if(list){ list.classList.toggle('open'); det.classList.toggle('open'); }
+    return;
+  }
+
+  /* family request type chips */
+  const fchip = e.target.closest('[data-ftype]');
+  if(fchip){
+    const wrap = fchip.closest('[data-famtype]');
+    wrap.querySelectorAll('[data-ftype]').forEach(c => c.classList.toggle('active', c === fchip));
+    $('#famType').value = fchip.dataset.ftype;
+    $('#famDateField').style.display = (fchip.dataset.ftype === 'طلب موعد') ? 'flex' : 'none';
+    return;
+  }
+
+  /* social buttons */
+  const soc = e.target.closest('[data-social]');
+  if(soc){ toast('رابط صفحة ' + soc.dataset.social + ' سيُضاف من طرف إدارة المركز.'); return; }
+
+  /* anchor links with data attributes */
+  const a = e.target.closest('a[href^="#"]');
+  if(a){
+    const href = a.getAttribute('href');
+    if(href === '#') { e.preventDefault(); return; }
+    const target = document.querySelector(href);
+    if(!target){ e.preventDefault(); return; }
+    e.preventDefault();
+
+    if(a.dataset.tablink) activateTab('beneficiaries', a.dataset.tablink);
+    if(a.dataset.tablink && a.closest('.dropdown')) activateTab('team', a.dataset.tablink);
+    if(a.dataset.actlink){
+      actFilter = a.dataset.actlink;
+      const fg = document.querySelector('[data-filters="activities"]');
+      if(fg) fg.querySelectorAll('[data-filter]').forEach(c => c.classList.toggle('active', c.dataset.filter === actFilter));
+      renderActivities();
+    }
+    if(a.dataset.medialink) activateTab('media', a.dataset.medialink);
+    if(a.dataset.famlink){
+      $('#famType').value = a.dataset.famlink;
+      $$('[data-ftype]').forEach(c => c.classList.toggle('active', c.dataset.ftype === a.dataset.famlink));
+      $('#famDateField').style.display = (a.dataset.famlink === 'طلب موعد') ? 'flex' : 'none';
+    }
+    /* team dropdown links */
+    if(['admin','educators','specialists','volunteers'].includes(a.dataset.tablink) && href === '#team'){
+      activateTab('team', a.dataset.tablink);
+    }
+
+    closeAllMenus();
+    setTimeout(() => {
+      target.scrollIntoView({ behavior:'smooth', block:'start' });
+      flash(target);
+    }, 60);
+  }
+});
+
+/* ============================================================
+   PUBLIC FORM SUBMISSIONS
+============================================================ */
+document.addEventListener('submit', function(e){
+  const form = e.target.closest('form[data-pub]');
+  if(!form) return;
+  e.preventDefault();
+  const type = form.dataset.pub;
+  const d = Object.fromEntries(new FormData(form).entries());
+
+  if(type === 'registration'){
+    const ref = 'REG-' + String(state.registrations.length + 1).padStart(4, '0');
+    state.registrations.push({
+      id: uid(), ref,
+      childName: d.childName, dob: d.dob, gender: d.gender,
+      guardian: d.guardian, relation: d.relation, phone: d.phone,
+      email: d.email, city: d.city, note: d.note,
+      status: 'قيد الدراسة', createdAt: todayISO()
+    });
+    save();
+    const box = $('#regSuccess');
+    box.innerHTML = '✅ تم إرسال طلب التسجيل بنجاح. رقم طلبكم هو <b>' + ref + '</b>. سيتم التواصل معكم من طرف إدارة المركز بعد دراسة الطلب.';
+    box.classList.add('show');
+    box.scrollIntoView({ behavior:'smooth', block:'center' });
+    form.reset();
+    toast('تم إرسال طلب التسجيل — الرقم: ' + ref);
+    renderAdmin();
+    return;
+  }
+
+  if(type === 'family'){
+    state.requests.push({
+      id: uid(),
+      type: d.requestType || 'طلب معلومات',
+      name: d.name, phone: d.phone, email: d.email,
+      prefDate: d.prefDate || '', message: d.message || '',
+      status: 'جديد', createdAt: todayISO()
+    });
+    save();
+    toast('تم إرسال الطلب بنجاح، سنتواصل معكم قريباً.');
+    form.reset();
+    $('#famDateField').style.display = 'none';
+    $$('[data-ftype]').forEach((c, i) => c.classList.toggle('active', i === 0));
+    $('#famType').value = 'طلب معلومات';
+    renderAdmin();
+    return;
+  }
+
+  if(type === 'volunteer'){
+    state.volunteers.push({
+      id: uid(), name: d.name, phone: d.phone, email: d.email,
+      area: d.area, spec: d.spec, availability: d.availability,
+      message: d.message, status: 'جديد', createdAt: todayISO()
+    });
+    save();
+    toast('تم تسجيل طلب التطوع بنجاح. شكراً لكم!');
+    form.reset();
+    renderTeam(); renderStats(); renderAdmin();
+    return;
+  }
+
+  if(type === 'partnership'){
+    state.partnershipRequests.push({
+      id: uid(), org: d.org, partnershipType: d.partnershipType,
+      contact: d.contact, phone: d.phone, email: d.email,
+      details: d.details, status: 'جديد', createdAt: todayISO()
+    });
+    save();
+    toast('تم إرسال طلب الشراكة بنجاح.');
+    form.reset();
+    renderAdmin();
+    return;
+  }
+
+  if(type === 'equipment'){
+    state.equipmentDonations.push({
+      id: uid(), donor: d.donor, phone: d.phone, itemType: d.itemType,
+      qty: d.qty, description: d.description, createdAt: todayISO()
+    });
+    save();
+    toast('تم تسجيل عرض التبرع بنجاح. شكراً لكم!');
+    form.reset();
+    renderAdmin();
+    return;
+  }
+});
+
+/* file / track lookups */
+$('#fileForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const q = $('#fileInput').value.trim().toLowerCase();
+  const box = $('#fileResult');
+  if(!q){ box.innerHTML = ''; return; }
+  const b = state.beneficiaries.find(x => x.fileNo.toLowerCase() === q || x.name.toLowerCase() === q);
+  if(!b){
+    box.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div>
+      <h4>لا يوجد ملف مطابق</h4>
+      <p>لم نجد أي ملف بهذا الرقم. يتم إنشاء ملفات المستفيدين من طرف إدارة المركز بعد قبول طلب التسجيل.</p>
+      <small>للاستفسار: 0524 39 20 60</small></div>`;
+    return;
+  }
+  box.innerHTML = `<div class="card" style="border-inline-start:5px solid var(--pink)">
+    <h3 style="color:var(--navy);margin-bottom:12px">ملف رقم ${esc(b.fileNo)}</h3>
+    <div class="grid g3">
+      <div><b style="color:var(--navy)">الاسم:</b><br>${esc(b.name)}</div>
+      <div><b style="color:var(--navy)">تاريخ الميلاد:</b><br>${b.dob ? fmtDate(b.dob) : '—'}</div>
+      <div><b style="color:var(--navy)">الجنس:</b><br>${esc(b.gender || '—')}</div>
+      <div><b style="color:var(--navy)">ولي الأمر:</b><br>${esc(b.guardian || '—')}</div>
+      <div><b style="color:var(--navy)">الهاتف:</b><br>${esc(b.phone || '—')}</div>
+      <div><b style="color:var(--navy)">الحالة:</b><br><span class="badge green">${esc(b.status)}</span></div>
+    </div>
+    ${b.note ? `<p style="margin-top:14px;color:var(--muted);font-size:.86rem"><b>ملاحظات:</b> ${esc(b.note)}</p>` : ''}
+  </div>`;
+});
+
+$('#trackForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const q = $('#trackInput').value.trim().toLowerCase();
+  const box = $('#trackResult');
+  if(!q){ box.innerHTML = ''; return; }
+  const b = state.beneficiaries.find(x => x.fileNo.toLowerCase() === q);
+  if(!b){
+    box.innerHTML = `<div class="empty"><div class="empty-icon">📈</div>
+      <h4>لا توجد بيانات تتبّع</h4>
+      <p>لم نجد أي ملف بهذا الرقم. يتم إنشاء الملفات من طرف إدارة المركز.</p>
+      <small>تُحدَّث بيانات التتبّع من طرف الإدارة.</small></div>`;
+    return;
+  }
+  const att = state.attendance.filter(a => a.beneficiaryId === b.id);
+  const app = state.appointments.filter(a => (a.person || '').trim() === b.name.trim());
+  box.innerHTML = `
+    <div class="card" style="border-inline-start:5px solid var(--pink)">
+      <h3 style="color:var(--navy);margin-bottom:6px">تتبّع ملف ${esc(b.fileNo)}</h3>
+      <p style="color:var(--muted);font-size:.86rem">${esc(b.name)} — الحالة: <span class="badge green">${esc(b.status)}</span></p>
+      <h4 style="color:var(--navy);margin-top:18px">سجل الحضور (${att.length})</h4>
+      ${att.length ? `<ul class="check-list">${att.map(a => {
+          const act = state.activities.find(x => x.id === a.activityId);
+          return `<li>${a.date ? fmtDate(a.date) : ''} — ${act ? esc(act.title) : 'نشاط'} (${esc(a.status)})</li>`;
+        }).join('')}</ul>` : '<p style="color:var(--muted);font-size:.85rem">لا يوجد سجل حضور مسجّل بعد.</p>'}
+      <h4 style="color:var(--navy);margin-top:18px">المواعيد (${app.length})</h4>
+      ${app.length ? `<ul class="check-list">${app.map(a => `<li>${esc(a.title)} — ${a.date ? fmtDate(a.date) : ''} ${a.time ? 'على الساعة ' + esc(a.time) : ''}</li>`).join('')}</ul>`
+        : '<p style="color:var(--muted);font-size:.85rem">لا توجد مواعيد مسجّلة.</p>'}
+    </div>`;
+});
+
+/* ============================================================
+   ADMIN PANEL
+============================================================ */
+const ADMIN_SECTIONS = [
+  { key:'overview', label:'نظرة عامة', icon:'📊' },
+  { key:'beneficiaries', label:'إدارة المستفيدين', icon:'🧒' },
+  { key:'staff', label:'إدارة الأطر', icon:'👥' },
+  { key:'appointments', label:'المواعيد', icon:'🗓️' },
+  { key:'registrations', label:'التسجيلات', icon:'📝' },
+  { key:'attendance', label:'الحضور', icon:'✅' },
+  { key:'activities', label:'الأنشطة', icon:'🎯' },
+  { key:'announcements', label:'الإعلانات', icon:'📢' },
+  { key:'media', label:'الصور والفيديوهات', icon:'🖼️' },
+  { key:'requests', label:'طلبات التواصل', icon:'✉️' },
+  { key:'volunteers', label:'المتطوعون', icon:'🤝' },
+  { key:'partners', label:'الشراكات والدعم', icon:'💗' }
+];
+
+function fieldHTML(f){
+  const req = f.required ? 'required' : '';
+  const cls = 'a-field' + (f.full ? ' full' : '');
+  if(f.type === 'select'){
+    return `<label class="${cls}"><span>${f.label}</span><select name="${f.name}" ${req}>${f.options.map(o => `<option value="${esc(o.v)}">${esc(o.t)}</option>`).join('')}</select></label>`;
+  }
+  if(f.type === 'textarea'){
+    return `<label class="a-field full"><span>${f.label}</span><textarea name="${f.name}" rows="3" ${req}></textarea></label>`;
+  }
+  return `<label class="${cls}"><span>${f.label}</span><input type="${f.type || 'text'}" name="${f.name}" ${req}></label>`;
+}
+function aForm(type, fields, btnLabel){
+  return `<form data-form="${type}">
+    <div class="a-form-grid">${fields.map(fieldHTML).join('')}</div>
+    <button type="submit" class="btn btn-pink btn-sm">${btnLabel}</button>
+  </form>`;
+}
+function aTable(headers, rows){
+  if(!rows.length) return `<div class="a-empty">لا توجد بيانات بعد.</div>`;
+  return `<div class="a-table-wrap"><table class="a-table">
+    <thead><tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr></thead>
+    <tbody>${rows.join('')}</tbody></table></div>`;
+}
+const delBtn = (col, id) => `<button class="a-del" data-del="${col}:${id}">حذف</button>`;
+
+const adminPanels = {
+  overview(){
+    const stat = (label, val, ico) => `<div class="a-stat"><div class="ico">${ico}</div><div><b>${val}</b><span>${label}</span></div></div>`;
+    return `
+      <div class="a-note">مرحباً بك في لوحة إدارة مركز أبناؤنا T21. كل ما تضيفه هنا يظهر مباشرة في الموقع العمومي. البيانات محفوظة محلياً في هذا المتصفح.</div>
+      <div class="a-stats">
+        ${stat('المستفيدون', state.beneficiaries.length, '🧒')}
+        ${stat('الأطر', state.staff.length, '👥')}
+        ${stat('الأنشطة', state.activities.length, '🎯')}
+        ${stat('الإعلانات', state.announcements.length, '📢')}
+        ${stat('التسجيلات', state.registrations.length, '📝')}
+        ${stat('طلبات التواصل', state.requests.length, '✉️')}
+        ${stat('المتطوعون', state.volunteers.length, '🤝')}
+        ${stat('المواعيد', state.appointments.length, '🗓️')}
+      </div>
+      <div class="a-block">
+        <h4>آخر التسجيلات الواردة</h4>
+        ${aTable(['الرقم','اسم الطفل','ولي الأمر','الهاتف','الحالة'],
+          state.registrations.slice(-5).reverse().map(r => `<tr><td>${esc(r.ref)}</td><td>${esc(r.childName)}</td><td>${esc(r.guardian)}</td><td>${esc(r.phone)}</td><td>${esc(r.status)}</td></tr>`))}
+      </div>
+      <div class="a-block">
+        <h4>آخر طلبات التواصل</h4>
+        ${aTable(['النوع','الاسم','الهاتف','التاريخ'],
+          state.requests.slice(-5).reverse().map(r => `<tr><td>${esc(r.type)}</td><td>${esc(r.name)}</td><td>${esc(r.phone)}</td><td>${esc(r.createdAt)}</td></tr>`))}
+      </div>`;
+  },
+
+  beneficiaries(){
+    const nextNo = 'T21-' + String(state.beneficiaries.length + 1).padStart(4, '0');
+    return `
+      <div class="a-block">
+        <h4>إضافة مستفيد جديد — رقم الملف القادم: ${nextNo}</h4>
+        ${aForm('beneficiary', [
+          { name:'name', label:'الاسم الكامل', required:true },
+          { name:'dob', label:'تاريخ الميلاد', type:'date' },
+          { name:'gender', label:'الجنس', type:'select', options:[{v:'ذكر',t:'ذكر'},{v:'أنثى',t:'أنثى'}] },
+          { name:'guardian', label:'اسم ولي الأمر' },
+          { name:'phone', label:'الهاتف' },
+          { name:'note', label:'ملاحظات', type:'textarea' }
+        ], 'إضافة المستفيد')}
+      </div>
+      <div class="a-block">
+        <h4>لائحة المستفيدين (${state.beneficiaries.length})</h4>
+        ${aTable(['رقم الملف','الاسم','ولي الأمر','الهاتف','الحالة','إجراء'],
+          state.beneficiaries.map(b => `<tr>
+            <td>${esc(b.fileNo)}</td><td>${esc(b.name)}</td><td>${esc(b.guardian || '—')}</td>
+            <td>${esc(b.phone || '—')}</td><td><span class="badge green">${esc(b.status)}</span></td>
+            <td>${delBtn('beneficiaries', b.id)}</td></tr>`))}
+      </div>`;
+  },
+
+  staff(){
+    return `
+      <div class="a-block">
+        <h4>إضافة إطار / مربٍّ / متطوع</h4>
+        ${aForm('staff', [
+          { name:'name', label:'الاسم الكامل', required:true },
+          { name:'role', label:'الصفة', type:'select', options:[
+              {v:'admin',t:'الإدارة'},{v:'educators',t:'المربون'},{v:'specialists',t:'الأطر المتخصصة'},{v:'volunteers',t:'المتطوعون'}]},
+          { name:'spec', label:'التخصص / المهمة' },
+          { name:'phone', label:'الهاتف' }
+        ], 'إضافة الإطار')}
+      </div>
+      <div class="a-block">
+        <h4>لائحة الأطر (${state.staff.length})</h4>
+        ${aTable(['الاسم','الصفة','التخصص','الهاتف','إجراء'],
+          state.staff.map(s => `<tr>
+            <td>${esc(s.name)}</td><td>${esc(STAFF_ROLES[s.role] || s.role)}</td>
+            <td>${esc(s.spec || '—')}</td><td>${esc(s.phone || '—')}</td>
+            <td>${delBtn('staff', s.id)}</td></tr>`))}
+      </div>
+      <div class="a-note">ملاحظة: المسؤولتان الإداريتان (لالة فاطمة روكاني — رئيسة المركز، ونور بلعيساوي — مديرة المركز) معروضتان تلقائياً في صفحة «الإدارة».</div>`;
+  },
+
+  appointments(){
+    return `
+      <div class="a-block">
+        <h4>إضافة موعد</h4>
+        ${aForm('appointment', [
+          { name:'title', label:'عنوان الموعد', required:true },
+          { name:'date', label:'التاريخ', type:'date' },
+          { name:'time', label:'التوقيت', type:'time' },
+          { name:'place', label:'المكان' },
+          { name:'person', label:'المعني (مستفيد / أسرة)' }
+        ], 'إضافة الموعد')}
+      </div>
+      <div class="a-block">
+        <h4>لائحة المواعيد (${state.appointments.length})</h4>
+        ${aTable(['العنوان','التاريخ','التوقيت','المكان','المعني','إجراء'],
+          state.appointments.map(a => `<tr>
+            <td>${esc(a.title)}</td><td>${a.date ? fmtDate(a.date) : '—'}</td>
+            <td>${esc(a.time || '—')}</td><td>${esc(a.place || '—')}</td>
+            <td>${esc(a.person || '—')}</td><td>${delBtn('appointments', a.id)}</td></tr>`))}
+      </div>`;
+  },
+
+  registrations(){
+    const rows = state.registrations.map(r => `<tr>
+      <td>${esc(r.ref)}</td><td>${esc(r.childName)}</td><td>${esc(r.guardian)}</td>
+      <td>${esc(r.phone)}</td><td>${r.dob ? fmtDate(r.dob) : '—'}</td>
+      <td>${esc(r.status)}</td>
+      <td>
+        <button class="a-st" data-setstatus="registrations:${r.id}:مقبول">قبول</button>
+        <button class="a-st" data-setstatus="registrations:${r.id}:مرفوض">رفض</button>
+        ${delBtn('registrations', r.id)}
+      </td></tr>`).join('');
+    return `
+      <div class="a-block">
+        <h4>إضافة تسجيل يدوي</h4>
+        ${aForm('registration', [
+          { name:'childName', label:'اسم الطفل', required:true },
+          { name:'guardian', label:'ولي الأمر' },
+          { name:'phone', label:'الهاتف' },
+          { name:'dob', label:'تاريخ الميلاد', type:'date' },
+          { name:'note', label:'ملاحظات', type:'textarea' }
+        ], 'إضافة التسجيل')}
+      </div>
+      <div class="a-block">
+        <h4>لائحة التسجيلات (${state.registrations.length})</h4>
+        ${aTable(['الرقم','اسم الطفل','ولي الأمر','الهاتف','تاريخ الميلاد','الحالة','إجراء'], rows ? [rows] : [])}
+      </div>`;
+  },
+
+  attendance(){
+    const benOptions = state.beneficiaries.map(b => `<option value="${b.id}">${esc(b.fileNo)} — ${esc(b.name)}</option>`).join('');
+    const actOptions = state.activities.map(a => `<option value="${a.id}">${esc(a.title)}</option>`).join('');
+    if(!state.beneficiaries.length){
+      return `<div class="a-note">لإضافة سجل حضور، يجب أولاً إضافة مستفيد واحد على الأقل من قسم «إدارة المستفيدين».</div>`;
+    }
+    return `
+      <div class="a-block">
+        <h4>تسجيل الحضور</h4>
+        <form data-form="attendance">
+          <div class="a-form-grid">
+            <label class="a-field"><span>المستفيد</span><select name="beneficiaryId">${benOptions}</select></label>
+            <label class="a-field"><span>النشاط</span><select name="activityId"><option value="">— بدون نشاط —</option>${actOptions}</select></label>
+            <label class="a-field"><span>التاريخ</span><input type="date" name="date" value="${todayISO()}"></label>
+            <label class="a-field"><span>الحالة</span><select name="status"><option value="حاضر">حاضر</option><option value="غائب">غائب</option><option value="متأخر">متأخر</option></select></label>
+          </div>
+          <button type="submit" class="btn btn-pink btn-sm">تسجيل الحضور</button>
+        </form>
+      </div>
+      <div class="a-block">
+        <h4>سجل الحضور (${state.attendance.length})</h4>
+        ${aTable(['المستفيد','النشاط','التاريخ','الحالة','إجراء'],
+          state.attendance.map(a => {
+            const b = state.beneficiaries.find(x => x.id === a.beneficiaryId);
+            const act = state.activities.find(x => x.id === a.activityId);
+            return `<tr><td>${b ? esc(b.name) : '—'}</td><td>${act ? esc(act.title) : '—'}</td>
+              <td>${a.date ? fmtDate(a.date) : '—'}</td><td>${esc(a.status)}</td>
+              <td>${delBtn('attendance', a.id)}</td></tr>`;
+          }))}
+      </div>`;
+  },
+
+  activities(){
+    return `
+      <div class="a-block">
+        <h4>إضافة نشاط جديد</h4>
+        ${aForm('activity', [
+          { name:'title', label:'عنوان النشاط', required:true },
+          { name:'cat', label:'التصنيف', type:'select', options:Object.keys(ACT_CATS).map(k => ({v:k, t:ACT_CATS[k]})) },
+          { name:'date', label:'التاريخ', type:'date' },
+          { name:'place', label:'المكان' },
+          { name:'image', label:'رابط صورة (اختياري)', type:'url' },
+          { name:'desc', label:'وصف النشاط', type:'textarea' }
+        ], 'إضافة النشاط')}
+      </div>
+      <div class="a-block">
+        <h4>لائحة الأنشطة (${state.activities.length})</h4>
+        ${aTable(['العنوان','التصنيف','التاريخ','المكان','إجراء'],
+          state.activities.map(a => `<tr>
+            <td>${esc(a.title)}</td><td>${esc(ACT_CATS[a.cat] || a.cat)}</td>
+            <td>${a.date ? fmtDate(a.date) : '—'}</td><td>${esc(a.place || '—')}</td>
+            <td>${delBtn('activities', a.id)}</td></tr>`))}
+      </div>`;
+  },
+
+  announcements(){
+    return `
+      <div class="a-block">
+        <h4>نشر إعلان</h4>
+        ${aForm('announcement', [
+          { name:'title', label:'عنوان الإعلان', required:true },
+          { name:'cat', label:'التصنيف', type:'select', options:Object.keys(ANN_CATS).map(k => ({v:k, t:ANN_CATS[k]})) },
+          { name:'body', label:'نص الإعلان', type:'textarea', required:true }
+        ], 'نشر الإعلان')}
+      </div>
+      <div class="a-block">
+        <h4>الإعلانات المنشورة (${state.announcements.length})</h4>
+        ${aTable(['العنوان','التصنيف','النص','إجراء'],
+          state.announcements.map(a => `<tr>
+            <td>${esc(a.title)}</td><td>${esc(ANN_CATS[a.cat] || a.cat)}</td>
+            <td style="max-width:320px">${esc((a.body || '').slice(0, 70))}${(a.body || '').length > 70 ? '…' : ''}</td>
+            <td>${delBtn('announcements', a.id)}</td></tr>`))}
+      </div>`;
+  },
+
+  media(){
+    return `
+      <div class="a-block">
+        <h4>إضافة صورة أو فيديو</h4>
+        ${aForm('media', [
+          { name:'title', label:'العنوان', required:true },
+          { name:'type', label:'النوع', type:'select', options:[{v:'photo',t:'صورة'},{v:'video',t:'فيديو'}] },
+          { name:'url', label:'الرابط (URL)', type:'url' },
+          { name:'desc', label:'وصف مختصر', type:'textarea' }
+        ], 'إضافة')}
+      </div>
+      <div class="a-block">
+        <h4>المحتوى المنشور (${state.media.length})</h4>
+        ${aTable(['العنوان','النوع','الرابط','إجراء'],
+          state.media.map(m => `<tr>
+            <td>${esc(m.title)}</td><td>${m.type === 'photo' ? 'صورة' : 'فيديو'}</td>
+            <td style="max-width:260px;word-break:break-all">${esc(m.url || '—')}</td>
+            <td>${delBtn('media', m.id)}</td></tr>`))}
+      </div>`;
+  },
+
+  requests(){
+    return `
+      <div class="a-block">
+        <h4>طلبات التواصل الواردة (${state.requests.length})</h4>
+        ${aTable(['النوع','الاسم','الهاتف','البريد','التاريخ المقترح','الرسالة','الحالة','إجراء'],
+          state.requests.map(r => `<tr>
+            <td>${esc(r.type)}</td><td>${esc(r.name)}</td><td>${esc(r.phone)}</td>
+            <td>${esc(r.email || '—')}</td><td>${r.prefDate ? fmtDate(r.prefDate) : '—'}</td>
+            <td style="max-width:240px">${esc((r.message || '').slice(0, 60))}${(r.message || '').length > 60 ? '…' : ''}</td>
+            <td>${esc(r.status)}</td>
+            <td>
+              <button class="a-st" data-setstatus="requests:${r.id}:تمت المعالجة">معالجة</button>
+              ${delBtn('requests', r.id)}
+            </td></tr>`))}
+      </div>`;
+  },
+
+  volunteers(){
+    return `
+      <div class="a-block">
+        <h4>إضافة متطوع</h4>
+        ${aForm('volunteer', [
+          { name:'name', label:'الاسم الكامل', required:true },
+          { name:'phone', label:'الهاتف' },
+          { name:'area', label:'مجال التطوع', type:'select', options:[
+            {v:'المواكبة التربوية',t:'المواكبة التربوية'},
+            {v:'التنشيط الثقافي والفني',t:'التنشيط الثقافي والفني'},
+            {v:'الأنشطة الرياضية',t:'الأنشطة الرياضية'},
+            {v:'الدعم الإداري',t:'الدعم الإداري'},
+            {v:'التواصل والمعلوميات',t:'التواصل والمعلوميات'},
+            {v:'الرحلات والتظاهرات',t:'الرحلات والتظاهرات'}]},
+          { name:'availability', label:'أوقات التوفّر' }
+        ], 'إضافة المتطوع')}
+      </div>
+      <div class="a-block">
+        <h4>لائحة المتطوعين (${state.volunteers.length})</h4>
+        ${aTable(['الاسم','الهاتف','المجال','التوفّر','الحالة','إجراء'],
+          state.volunteers.map(v => `<tr>
+            <td>${esc(v.name)}</td><td>${esc(v.phone || '—')}</td><td>${esc(v.area || '—')}</td>
+            <td>${esc(v.availability || '—')}</td><td>${esc(v.status || 'جديد')}</td>
+            <td>${delBtn('volunteers', v.id)}</td></tr>`))}
+      </div>`;
+  },
+
+  partners(){
+    return `
+      <div class="a-block">
+        <h4>إضافة شريك / داعم</h4>
+        ${aForm('partner', [
+          { name:'name', label:'اسم الشريك', required:true },
+          { name:'type', label:'نوع الشراكة' },
+          { name:'note', label:'ملاحظة', type:'textarea' }
+        ], 'إضافة الشريك')}
+      </div>
+      <div class="a-block">
+        <h4>لائحة الشركاء (${state.partners.length})</h4>
+        ${aTable(['الاسم','النوع','ملاحظة','إجراء'],
+          state.partners.map(p => `<tr><td>${esc(p.name)}</td><td>${esc(p.type || '—')}</td>
+            <td>${esc(p.note || '—')}</td><td>${delBtn('partners', p.id)}</td></tr>`))}
+      </div>
+      <div class="a-block">
+        <h4>طلبات الشراكة (${state.partnershipRequests.length})</h4>
+        ${aTable(['المؤسسة','النوع','المسؤول','الهاتف','الحالة','إجراء'],
+          state.partnershipRequests.map(p => `<tr>
+            <td>${esc(p.org)}</td><td>${esc(p.partnershipType)}</td><td>${esc(p.contact)}</td>
+            <td>${esc(p.phone)}</td><td>${esc(p.status)}</td>
+            <td><button class="a-st" data-setstatus="partnershipRequests:${p.id}:تمت المعالجة">معالجة</button>
+            ${delBtn('partnershipRequests', p.id)}</td></tr>`))}
+      </div>
+      <div class="a-block">
+        <h4>عروض التبرع بالمعدات واللوازم (${state.equipmentDonations.length})</h4>
+        ${aTable(['المتبرع','الهاتف','النوع','الكمية','إجراء'],
+          state.equipmentDonations.map(d => `<tr>
+            <td>${esc(d.donor)}</td><td>${esc(d.phone)}</td><td>${esc(d.itemType)}</td>
+            <td>${esc(d.qty || '—')}</td><td>${delBtn('equipmentDonations', d.id)}</td></tr>`))}
+      </div>`;
+  }
+};
+
+function renderAdmin(){
+  const nav = $('#adminNav');
+  const body = $('#adminBody');
+  if(!nav || !body) return;
+  nav.innerHTML = ADMIN_SECTIONS.map(s =>
+    `<button class="admin-nav-item ${s.key === currentSection ? 'active' : ''}" data-sec="${s.key}" type="button">
+      <span>${s.icon}</span>${s.label}</button>`).join('');
+  body.innerHTML = adminPanels[currentSection] ? adminPanels[currentSection]() : '';
+}
+renderAdmin();
+
+/* admin nav clicks */
+$('#adminNav').addEventListener('click', function(e){
+  const btn = e.target.closest('[data-sec]');
+  if(!btn) return;
+  currentSection = btn.dataset.sec;
+  renderAdmin();
+});
+
+/* admin form submissions */
+$('#adminBody').addEventListener('submit', function(e){
+  const form = e.target.closest('form[data-form]');
+  if(!form) return;
+  e.preventDefault();
+  const type = form.dataset.form;
+  const d = Object.fromEntries(new FormData(form).entries());
+
+  switch(type){
+    case 'beneficiary': {
+      const fileNo = 'T21-' + String(state.beneficiaries.length + 1).padStart(4, '0');
+      state.beneficiaries.push({
+        id: uid(), fileNo, name: d.name, dob: d.dob, gender: d.gender,
+        guardian: d.guardian, phone: d.phone, note: d.note,
+        status: 'مسجل', createdAt: todayISO()
+      });
+      toast('تم إضافة المستفيد برقم الملف ' + fileNo);
+      break;
+    }
+    case 'staff':
+      state.staff.push({ id: uid(), name: d.name, role: d.role, spec: d.spec, phone: d.phone });
+      toast('تم إضافة الإطار بنجاح');
+      break;
+    case 'appointment':
+      state.appointments.push({ id: uid(), title: d.title, date: d.date, time: d.time, place: d.place, person: d.person });
+      toast('تم إضافة الموعد بنجاح');
+      break;
+    case 'registration': {
+      const ref = 'REG-' + String(state.registrations.length + 1).padStart(4, '0');
+      state.registrations.push({
+        id: uid(), ref, childName: d.childName, guardian: d.guardian, phone: d.phone,
+        dob: d.dob, note: d.note, status: 'قيد الدراسة', createdAt: todayISO()
+      });
+      toast('تم إضافة التسجيل — ' + ref);
+      break;
+    }
+    case 'attendance':
+      state.attendance.push({
+        id: uid(), beneficiaryId: d.beneficiaryId, activityId: d.activityId,
+        date: d.date || todayISO(), status: d.status
+      });
+      toast('تم تسجيل الحضور');
+      break;
+    case 'activity':
+      state.activities.push({
+        id: uid(), title: d.title, cat: d.cat, date: d.date, place: d.place,
+        image: d.image, desc: d.desc
+      });
+      toast('تم إضافة النشاط وهو معروض الآن في الموقع');
+      break;
+    case 'announcement':
+      state.announcements.push({ id: uid(), title: d.title, cat: d.cat, body: d.body, important: d.cat === 'important' });
+      toast('تم نشر الإعلان');
+      break;
+    case 'media':
+      state.media.push({ id: uid(), title: d.title, type: d.type, url: d.url, desc: d.desc });
+      toast('تم إضافة المحتوى إلى المعرض');
+      break;
+    case 'volunteer':
+      state.volunteers.push({
+        id: uid(), name: d.name, phone: d.phone, area: d.area,
+        availability: d.availability, status: 'معتمد', createdAt: todayISO()
+      });
+      toast('تم إضافة المتطوع');
+      break;
+    case 'partner':
+      state.partners.push({ id: uid(), name: d.name, type: d.type, note: d.note });
+      toast('تم إضافة الشريك');
+      break;
+  }
+  save();
+  renderAdmin();
+  renderPublic();
+});
+
+/* admin delete / status */
+$('#adminBody').addEventListener('click', function(e){
+  const del = e.target.closest('[data-del]');
+  if(del){
+    const parts = del.dataset.del.split(':');
+    const col = parts[0], id = parts[1];
+    if(state[col]) state[col] = state[col].filter(x => x.id !== id);
+    save(); renderAdmin(); renderPublic();
+    toast('تم الحذف بنجاح');
+    return;
+  }
+  const st = e.target.closest('[data-setstatus]');
+  if(st){
+    const parts = st.dataset.setstatus.split(':');
+    const col = parts[0], id = parts[1], val = parts[2];
+    const item = (state[col] || []).find(x => x.id === id);
+    if(item){ item.status = val; save(); renderAdmin(); renderPublic(); toast('تم تحديث الحالة'); }
+  }
+});
+
+/* ============================================================
+   LOGIN / LOGOUT
+============================================================ */
+const ADMIN_PASSWORD = 'Admin';
+
+function openLogin(){
+  $('#loginModal').classList.add('show');
+  $('#adminPass').value = '';
+  $('#loginErr').textContent = '';
+  setTimeout(() => $('#adminPass').focus(), 120);
+}
+function closeLogin(){ $('#loginModal').classList.remove('show'); }
+
+$('#openLogin').addEventListener('click', openLogin);
+$('#openLogin2').addEventListener('click', openLogin);
+$('#closeLogin').addEventListener('click', closeLogin);
+$('#loginModal').addEventListener('click', e => { if(e.target.id === 'loginModal') closeLogin(); });
+
+$('#loginForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const val = $('#adminPass').value;
+  if(val === ADMIN_PASSWORD){
+    closeLogin();
+    $('#adminPanel').classList.add('show');
+    document.body.style.overflow = 'hidden';
+    renderAdmin();
+    toast('مرحباً بك في لوحة الإدارة');
+  } else {
+    $('#loginErr').textContent = 'الرقم السري غير صحيح. المرجو المحاولة مرة أخرى.';
+    $('#adminPass').value = '';
+    $('#adminPass').focus();
+  }
+});
+
+$('#adminLogout').addEventListener('click', function(){
+  $('#adminPanel').classList.remove('show');
+  document.body.style.overflow = '';
+  toast('تم الخروج من لوحة الإدارة');
+});
+$('#adminViewSite').addEventListener('click', function(){
+  $('#adminPanel').classList.remove('show');
+  document.body.style.overflow = '';
+  window.scrollTo({ top:0, behavior:'smooth' });
+});
+
+/* ============================================================
+   MISC
+============================================================ */
+$('#waBtn').addEventListener('click', () => {
+  window.open('https://wa.me/212677659962'.replace('677659962','677659639'), '_blank', 'noopener');
+});
+$('#waBtn').addEventListener('click', () => {}, { passive:true });
+$('#waBtn').onclick = () => window.open('https://wa.me/212677659639', '_blank');
+
+const toTop = $('#toTop');
+window.addEventListener('scroll', function(){
+  toTop.classList.toggle('show', window.scrollY > 500);
+});
+toTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    closeLogin();
+    closeAllMenus();
+  }
+});
+
+$('#year').textContent = new Date().getFullYear();
+
+/* initial render */
+renderPublic();
+</script>
+</body>
+</html>
